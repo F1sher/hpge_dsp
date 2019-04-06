@@ -63,17 +63,36 @@ def fit_exp(data, n_start=0, n_stop=10):
     for d in data[n_start:n_stop]:
         dc = correct_bl(d)
         idx_min = np.where(dc == min(dc))[0][0]
+        idx_min = 300
         print(np.where(dc == min(dc)))
         print("idx_min = {}".format(idx_min))
-        #y = A exp(-tau*x)
-        #ln(y) = ln(A) - tau*x
-        idx_min = 300
-        p = np.polyfit(np.arange(LEN_EVENT)[idx_min:idx_min+4000], np.log(np.abs(dc[idx_min:idx_min+4000]) + 1), 1)
+        #y = A exp(tau*x)
+        #ln(y) = ln(A) + tau*x
+        p = np.polyfit(np.arange(LEN_EVENT)[idx_min:LEN_EVENT], np.log(np.abs(dc[idx_min:LEN_EVENT]) + 1), 1)
         tau, A = p[0], np.exp(p[1])
+        print("tau = {:.2e}, A = {:.2e}".format(tau, A))
         taus.append(tau)
         As.append(A)
 
     return sum(taus) / (n_stop - n_start), sum(As) / (n_stop - n_start)
+
+
+def PZ_corr(dat, tau):
+    y = np.zeros(LEN_EVENT)
+    for i in range(1, LEN_EVENT):
+        y[i] = y[i-1] + dat[i] - dat[i-1] * (1.0 + tau)
+    """
+    d = np.exp(1.0 / tau)
+    g = d / (1.0 - d)
+    m = 2.0 * (1.0 - d) / (1.0 + d)
+    #b1 = np.exp(-tau)
+    #a0 = (1.0 + b1) / 2.0
+    #a1 = -(1.0 + b1) / 2.0
+    y = np.zeros(LEN_EVENT)
+    for i in range(1, LEN_EVENT-1):
+        y[i] = (g * dat[i] + np.sum(dat[0:i])) * m #b1 * y[i-1] + a0 * d[i] + a1 * d[i-1] + d[i-1]
+    """
+    return y
 
 
 def make_trap_loops(d, tau, l, k):
@@ -109,13 +128,14 @@ def make_trap_loops(d, tau, l, k):
 
 def calc_trap_s(d, cs, l, k):
     AVG_TRAP = (l - k - 1) // 2
+    AVG_TRAP = 800
     #I_MIN_S_SHIFT_TRAP = 20
     #for i in range(k, LEN_EVENT):
     #    if (d[i] <= 0.995 * d[i-1]):
     #        i_min_s = i + k + I_MIN_S_SHIFT_TRAP
     #        break
     i_min_s = np.where(d == min(d))[0][0] + k
-    i_min_s = 300 + k
+    i_min_s = 200 + k
     #print("i_min_s = ", i_min_s, type(i_min_s))
         
     if (i_min_s + l - k > LEN_EVENT - 1):
@@ -145,8 +165,9 @@ def calc_CR_RC(d, tau, RC):
     return y / 1.0e3
 
 def calc_CR_RC_s(y, start=50, stop=5000, c_norm=1.0):
-    res = np.sum(y[start:stop]) / c_norm
-    return res / (stop - start)
+    return np.min(y[start:stop])
+#res = np.sum(y[start:stop]) / c_norm
+#    return res / (stop - start)
     
 
 def calc_RT(d):
@@ -216,7 +237,7 @@ def calc_histo_en(data, alg="integral", tau=0.6):
         RC = 4000
         for i, d in enumerate(data):
             y_CR_RC = calc_CR_RC(d, tau, RC) 
-            CR_RC_s = calc_CR_RC_s(y_CR_RC,  start=50, stop=LEN_EVENT)
+            CR_RC_s = calc_CR_RC_s(y_CR_RC,  start=0, stop=LEN_EVENT)
             en[i] = np.abs(CR_RC_s)
             np.savetxt("./histo_EN_CR_RC.txt", en, fmt="%.2f")
 
@@ -270,18 +291,18 @@ def main():
     #plt.plot(en_w1[0])
     #plt.show()
     """
-    
+
     histo_en_int = calc_histo_en(data_w1, alg="integral")
-    histo_en_trap = calc_histo_en(data_w1, alg="trap", tau=-2.15965e-05)
-    histo_en_CR_RC = calc_histo_en(data_w1, alg="CR_RC", tau=-2.15965e-05)#tau=-1.6779740e-05
+    histo_en_trap = calc_histo_en(data_w1, alg="trap", tau=-2.9e-05)
+    histo_en_CR_RC = calc_histo_en(data_w1, alg="CR_RC", tau=-2.9e-05)#tau=-1.6779740e-05
     print("sums Int: {:.1f}, Trap: {:.1f}, CR_RC: {:.1f}".format(np.sum(histo_en_int[0]),
                                                                  np.sum(histo_en_trap[0]),
                                                                  np.sum(histo_en_CR_RC[0])))
     #histo_RT = calc_histo_RT(data_w1)
     #histo_PSD = calc_histo_PSD(data_w1)
-    plt.plot(histo_en_int[1][:-1], histo_en_int[0], label="Histo integral en")
-    plt.plot(histo_en_trap[1][:-1], histo_en_trap[0], label="Histo trap en")
-    plt.plot(histo_en_CR_RC[1][:-1], histo_en_CR_RC[0], label="Histo CR-RC en")
+    plt.plot(histo_en_int[1][:-1], histo_en_int[0], ".", label="Histo integral en")
+    plt.plot(histo_en_trap[1][:-1], histo_en_trap[0], ".", label="Histo trap en")
+    plt.plot(histo_en_CR_RC[1][:-1], histo_en_CR_RC[0], ".", label="Histo CR-RC en")
     #plt.plot(histo_RT[1][:-1], histo_RT[0], label="Histo RT")
     #plt.plot(histo_PSD[1][:-1], histo_PSD[0], label="Histo PSD")
     plt.legend(loc="upper right")
@@ -295,12 +316,13 @@ def main():
     #plt.plot(data_w1[0] * np.exp(tau * np.arange(LEN_EVENT)), label="exp decay removed")
     
     for i in np.arange(0, 20):#[0, 1, 5, 10, 12, 17, 52]:
-        tau = -2.15965e-05#-1.1672976805488264e-05
+        tau = -3.0e-05#-1.1672976805488264e-05
         l, k = 4000, 3000
         d_clear, cTr, cs = make_trap_loops(data_w1[i], tau, l, k)
         trap_s = calc_trap_s(data_w1[i], cs, l, k)
         print("trap_s = {:.2f}".format(trap_s))
-
+        
+        
         RC = 4000
         y_CR_RC = calc_CR_RC(data_w1[i], tau, RC) 
         CR_RC_s = calc_CR_RC_s(y_CR_RC, start=50, stop=LEN_EVENT)
@@ -316,9 +338,10 @@ def main():
         plt.plot(cTr, label="cTr")
         plt.plot(cs, label="cs")
         plt.plot(y_CR_RC, label="CR_RC")
+        plt.plot(PZ_corr(data_w1[i], tau), label="PZ corrected")
         plt.legend(loc="upper right")
         plt.show()
-    """    
+    """
 
 if __name__ == "__main__":
     main()

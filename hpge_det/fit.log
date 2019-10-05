@@ -1,0 +1,337 @@
+
+
+*******************************************************************************
+Sat Aug  3 16:24:08 2019
+
+
+FIT:    data read from "< (head -n 32000 ../data/3exp_wave1.txt)"
+        format = z
+        #datapoints = 32000
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 6.0151056972e+10   0.00e+00  4.67e-03    1.000000e+00   1.000000e+00
+   9 3.0380921474e+06  -4.07e-03  4.67e-08    1.449459e+03   2.820474e+05
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 3.03809e+06
+rel. change during last iteration : -4.06728e-08
+
+degrees of freedom    (FIT_NDF)                        : 31998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 9.74404
+variance of residuals (reduced chisquare) = WSSR/ndf   : 94.9463
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 1449.46          +/- 0.112        (0.007729%)
+tau             = 282047           +/- 342.9        (0.1216%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.858  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:44:11 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 31968
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+BREAK: Need via and either parameter list or file
+
+*******************************************************************************
+Mon Aug  5 17:44:17 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 31968
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 1.3733027379e+11   0.00e+00  2.10e+01    4.500000e+03   1.000000e+00
+  11 6.0610360084e+08  -1.82e-02  2.10e-05    4.180221e+03   1.594121e+04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 6.06104e+08
+rel. change during last iteration : -1.82042e-07
+
+degrees of freedom    (FIT_NDF)                        : 31966
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 137.699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 18960.9
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 4180.22          +/- 2.323        (0.05558%)
+tau             = 15941.2          +/- 14.22        (0.08918%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.742  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:45:01 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 32118
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 6.4574095878e+08   0.00e+00  1.72e+03    4.180221e+03   1.594121e+04
+   2 6.2791815542e+08  -5.71e-01  1.72e+01    4.236942e+03   1.586200e+04
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 6.27918e+08
+rel. change during last iteration : -5.71281e-06
+
+degrees of freedom    (FIT_NDF)                        : 32116
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 139.827
+variance of residuals (reduced chisquare) = WSSR/ndf   : 19551.6
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 4236.94          +/- 2.362        (0.05574%)
+tau             = 15862            +/- 14.14        (0.08914%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.742  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:45:31 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 32118
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 1.6551563842e+09   0.00e+00  1.89e+03    4.600000e+03   1.586200e+04
+   2 6.2791807670e+08  -2.06e-04  1.89e+01    4.236999e+03   1.586154e+04
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 6.27918e+08
+rel. change during last iteration : -2.05711e-09
+
+degrees of freedom    (FIT_NDF)                        : 32116
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 139.827
+variance of residuals (reduced chisquare) = WSSR/ndf   : 19551.6
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 4237             +/- 2.362        (0.05574%)
+tau             = 15861.5          +/- 14.14        (0.08913%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.742  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:46:24 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 31768
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 6.7765914315e+08   0.00e+00  1.75e+03    4.236999e+03   1.586154e+04
+   3 5.8545299231e+08  -5.80e-03  1.75e+00    4.109217e+03   1.603273e+04
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 5.85453e+08
+rel. change during last iteration : -5.79567e-08
+
+degrees of freedom    (FIT_NDF)                        : 31766
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 135.758
+variance of residuals (reduced chisquare) = WSSR/ndf   : 18430.2
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 4109.22          +/- 2.288        (0.05569%)
+tau             = 16032.7          +/- 14.39        (0.08973%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.743  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:50:16 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 32088
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 7.0374514025e+08   0.00e+00  1.70e+03    4.109217e+03   1.603273e+04
+   3 6.1945361476e+08  -2.13e-02  1.70e+00    4.231490e+03   1.586762e+04
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 6.19454e+08
+rel. change during last iteration : -2.13163e-07
+
+degrees of freedom    (FIT_NDF)                        : 32086
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 138.946
+variance of residuals (reduced chisquare) = WSSR/ndf   : 19306
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 4231.49          +/- 2.347        (0.05546%)
+tau             = 15867.6          +/- 14.08        (0.08873%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.742  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:52:16 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl_log.txt"
+        format = z
+        #datapoints = 32088
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = a * x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1006235457e+13   0.00e+00  1.31e+04    1.000000e+00   1.000000e+00
+   6 2.7499504712e+02  -1.41e-03  1.31e-02   -5.326313e-05   8.236608e+00
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 274.995
+rel. change during last iteration : -1.40953e-08
+
+degrees of freedom    (FIT_NDF)                        : 32086
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0925773
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00857056
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -5.32631e-05     +/- 5.579e-08    (0.1048%)
+b               = 8.23661          +/- 0.001034     (0.01255%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.866  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:53:59 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 14350
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 2.6101255766e+08   0.00e+00  2.19e+03    4.231490e+03   1.586762e+04
+   4 1.4285794349e+07  -2.76e-04  2.19e+04    4.475256e+03   1.330810e+04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1.42858e+07
+rel. change during last iteration : -2.75592e-09
+
+degrees of freedom    (FIT_NDF)                        : 14348
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 31.5542
+variance of residuals (reduced chisquare) = WSSR/ndf   : 995.665
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 4475.26          +/- 0.6698       (0.01497%)
+tau             = 13308.1          +/- 4.384        (0.03294%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.789  1.000 
+
+
+*******************************************************************************
+Mon Aug  5 17:55:46 2019
+
+
+FIT:    data read from "../data/13exp_1sgnl.txt"
+        format = z
+        #datapoints = 14350
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A * exp(-x / tau)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             tau          
+   0 1.6707424372e+07   0.00e+00  2.23e+03    4.475256e+03   1.330810e+04
+   2 1.6538959203e+07  -5.61e-03  2.23e+01    4.481516e+03   1.330013e+04
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.6539e+07
+rel. change during last iteration : -5.61257e-08
+
+degrees of freedom    (FIT_NDF)                        : 14348
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 33.9515
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1152.7
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 4481.52          +/- 0.7208       (0.01608%)
+tau             = 13300.1          +/- 4.707        (0.03539%)
+
+correlation matrix of the fit parameters:
+                A      tau    
+A               1.000 
+tau            -0.789  1.000 

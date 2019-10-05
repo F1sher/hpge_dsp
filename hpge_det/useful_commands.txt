@@ -1,0 +1,2016 @@
+exit
+import numpy as np
+exit
+13994240 / 512
+56000 / 512
+512 * 109
+version
+version()
+import numpy as np
+impoty histo_calc
+import histo_calc
+data_w1 = load_data("../data/3exp_wave1.txt", start=0, stop=7660)
+data_w1 = histo_calc.load_data("../data/3exp_wave1.txt", start=0, stop=7660)
+len(data_w1)
+data_w1.shape
+LEN_EVENT = histo_calc.LEN_EVENT
+import matplotlib.pyplot as plt
+plt.plot(data_w1[0])
+plt.show()
+def calc_en_max(d, bl_shift):
+	idx_max = np.argmax(d)
+	bl_start = idx_max - bl_shift
+	bl_stop = bl_start + 128
+	bl = np.mean(d[bl_start:bl_stop])
+	en = d[idx_max] - bl
+	return en, idx_max, en[idx_max], bl
+calc_en_max(d[0], 300)
+calc_en_max(data_w1[0], 300)
+import numpy as np
+calc_en_max(data_w1[0], 300)
+np.argmax(data_w1[0])
+idx_max = np.argmax(d)
+idx_max = np.argmax(data_w1[1])
+bl_start = idx_max - 300
+bl_stop = bl_start + 128
+bl = np.mead(data_w1[0][bl_start:bl_stop])
+bl = np.mean(data_w1[0][bl_start:bl_stop])
+bl = np.mean(data_w1[1][bl_start:bl_stop])
+en = data_w1[1][idx_max] - bl
+en
+idx_max
+en[idx_max]
+def calc_en_max(d, bl_shift):
+	idx_max = np.argmax(d)
+	bl_start = idx_max - bl_shift
+	bl_stop = bl_start + 128
+	bl = np.mean(d[bl_start:bl_stop])
+	en = d[idx_max] - bl
+	return en, idx_max, d[idx_max], bl
+calc_en_max(data_w1[1])
+calc_en_max(data_w1[1], 300)
+plt.plot(data_w1[1])
+plt.show()
+en = np.zeros(data_w1.shape[0], dtype=float)
+for i, d in enumerate(data_w1):
+	en[i] = calc_en_max(d, 300)[0]
+en[0]
+en[6000]
+en[7660]
+en[7659]
+plt.plot(en)
+plt.plot(np.histogram(en, bins=np.arange(0, 4095)))
+hist = np.histogram(en, bins=range(0, 4095)
+)
+plt.plot(hist[1][:-1], hist[0])
+plt.show()
+def calc_en_max(d, bl_shift):
+	idx_max = np.argmax(d)
+	bl_start = idx_max - bl_shift
+	if bl_start < 0:
+		return 0, 0, 0, 0
+	bl_stop = bl_start + 128
+	bl = np.mean(d[bl_start:bl_stop])
+	en = d[idx_max] - bl
+	return en, idx_max, d[idx_max], bl
+for i, d in enumerate(data_w1):
+en = np.zeros(data_w1.shape[0], dtype=float)
+for i, d in enumerate(data_w1):
+	en[i] = calc_en_max(d, 300)[0]
+np.where(en == 0)
+len(np.where(en == 0))
+np.where(en == 0).shape
+len(np.where(en == 0)[0])
+hist = np.histogram(en, bins=range(0, 4095))
+plt.plot(hist[1][:-1], hist[0])
+plt.show()
+np.where(en > 1000)
+plt.plot(data_w1[3])
+plt.show()
+plt.plot(data_w1[33])
+plt.show(33)
+calc_en_max(data_w1[33], 300)
+plt.plot(data_w1[33])
+plt.show()
+from scipy.optimize import curve_fit
+def f_exp(A, tau):
+def f_exp(t, A, tau):
+	return A * np.exp(-t / tau)
+plt.plot(data_w1[33])
+plt.show()
+popt, pcov = curve_fit(f_exp, range(1000, 30000), data_w1[33])
+def f_exp(t, A, tau):
+	return A * np.exp(-1.0 * t / tau)
+popt, pcov = curve_fit(f_exp, range(1000, 30000), data_w1[33])
+def f_exp(t, A, tau):
+def f_exp(t, A, tau, c):
+	return A * np.exp(-t / tau) + c
+popt, pcov = curve_fit(f_exp, np.arange(range(1000, 30000)), data_w1[33][1000:30000])
+popt, pcov = curve_fit(f_exp, np.arange(1000, 30000), data_w1[33][1000:30000])
+popt
+popt, pcov = curve_fit(f_exp, np.arange(1000, 2000), data_w1[33][1000:2000])
+popt
+def f_exp(t, A, tau):
+	return A * np.exp(-t / tau)
+popt, pcov = curve_fit(f_exp, np.arange(1000, 2000), data_w1[33][1000:2000])
+popt
+calc_en_max(data_w1[33], 300)
+plt.plot(data_w1[33])
+plt.show()
+plt.show(hist)
+plt.plot(hist)
+for i, d in enumerate(data_w1):
+	en[i] = calc_en_max(d, 300)[0]
+hist = np.histogram(en, bins=range(0, 4095))
+plt.plot(hist)
+plt.plot(hist[1][:-1], hist[0])
+plt.show()
+import .histo_calc
+import histo_calc
+d_4exp = load_data("../data/4exp_wave1.txt", start=0, stop=500)
+dw1_4exp = histo_calc.load_data("../data/4exp_wave1.txt", start=0, stop=500)
+from funcs import calc_en_max
+import matplotlib.pyplot as plt
+plt.plot(dw1_4exp[0])
+plt.show()
+plt.plot(dw1_4exp[0])
+plt.show()
+for i, d in enumerate(dw1_4exp):
+en = np.zeros(500)
+import numpy as np
+en = np.zeros(500)
+for i, d in enumerate(dw1_4exp):
+	en[i] = calc_en_max(d, 300)[0]
+from funcs import calc_en_max
+for i, d in enumerate(dw1_4exp):
+	en[i] = calc_en_max(d, 300)[0]
+def calc_en_max(d, bl_shift):
+	idx_max = np.argmax(d)
+	bl_start = idx_max - bl_shift
+	bl_stop = bl_start + 128
+	bl = np.mean(d[bl_start:bl_stop])
+	en = d[idx_max] - bl
+	return en, idx_max, d[idx_max], bl
+for i, d in enumerate(dw1_4exp):
+	en[i] = calc_en_max(d, 300)[0]
+plt.plot(en)
+plt.show()
+hist = np.histogram(en, bins=np.arange(0, 4095))
+plt.plot(hist[1][:-1], hist[0])
+plt.show()
+def calc_en_int(d, i_start, i_stop, bl_shift):
+    idx_max = np.argmax(d)
+    int_start = idx_max - i_start
+    int_stop = i_stop
+    bl_start = idx_max - bl_shift
+    bl_stop = bl_start + 128
+    bl = np.mean(d[bl_start:bl_stop])
+    en = np.sum(d[int_start:int_stop]) - (int_stop - int_start) * bl
+    return en, int_start, int_stop, bl
+calc_en_int(dw1_4exp[0])
+calc_en_int(dw1_4exp[0], 50, 32768, 300)
+plt.plot(dw1_4exp[0])
+plt.show()
+calc_en_int(dw1_4exp[0], 200, 32768, 300)
+en_int = np.zeros(500)
+en_int_w1_exp4 = np.zeros(500)
+for i, d in enumerate(dw1_4exp):
+	en_int_w1_exp4[i] = calc_en_int(d, 200, 32768, 300)
+for i, d in enumerate(dw1_4exp):
+	en_int_w1_exp4[i] = calc_en_int(d, 200, 32768, 300)[0]
+h = np.histogram(en_int_w1_exp4/1e6, bins=np.arange(0, 4095))
+plt.plot(h[1][:-1], h[0])
+plt.show()
+plt.plot(h[1][:-1], h[0])
+plt.plot(hist[1][:-1], hist[0])
+plt.show()
+hist = np.histogram(en/1e2, bins=np.arange(0, 4095))
+plt.plot(h[1][:-1], h[0])
+plt.plot(hist[1][:-1], hist[0])
+plt.show()
+def calc_hist(fname):
+	data = histo_calc.load_data(fname, start=0, stop=500)
+	for i, d in enumerate(data):
+def calc_hist(fname):
+	data = histo_calc.load_data(fname, start=0, stop=500)
+	en = np.zeros(500)
+	for i, d in enumerate(data):
+		en[i] = calc_en_int(d, 200, 32768, 300)
+	hist = np.histogram(en/1.0e6, bins=np.arange(0, 4095))
+	return hist
+hw1_exp4 = calc_hist("../data/4exp_wave1.txt")
+def calc_hist(fname):
+	data = histo_calc.load_data(fname, start=0, stop=500)
+	en = np.zeros(500)
+	for i, d in enumerate(data):
+		en[i] = calc_en_int(d, 200, 32768, 300)[0]
+	hist = np.histogram(en/1.0e6, bins=np.arange(0, 4095))
+	return hist
+plt.plot(hist[1][:-1], hist[0]), plt.show()
+plt.plot(h[1][:-1], h[0]), plt.show()
+hw1_exp4 = calc_hist("../data/4exp_wave1.txt")
+hw4_exp4 = calc_hist("../data/4exp_wave4.txt")
+plt.plot(hw1_exp4[1][:-1], hw1_exp4[0]), plt.plot(hw4_exp4[1][:-1], hw4_exp4[0]), plt.show()
+hw4_exp5 = calc_hist("../data/5exp_wave4.txt")
+plt.plot(hw1_exp4[1][:-1], hw1_exp4[0]), plt.plot(hw4_exp4[1][:-1], hw4_exp4[0]), plt.plot(hw4_exp5[1][:-1], hw4_exp5[0]), plt.show()
+def calc_hist(fname):
+	data = histo_calc.load_data(fname, start=0, stop=500)
+	en = np.zeros(500)
+	for i, d in enumerate(data):
+		en[i] = calc_en_int(d, 200, 32768, 300)[0]
+	hist = np.histogram(en/1.0e5, bins=np.arange(0, 4095))
+	return hist
+hw4_exp4 = calc_hist("../data/4exp_wave4.txt")
+hw4_exp5 = calc_hist("../data/5exp_wave4.txt")
+plt.plot(hw4_exp4[1][:-1], hw4_exp4[0]), plt.plot(hw4_exp5[1][:-1], hw4_exp5[0]), plt.show()
+hw1_exp4 = calc_hist("../data/5exp_wave1.txt")
+hw1_exp5 = calc_hist("../data/5exp_wave1.txt")
+hw1_exp4 = calc_hist("../data/4exp_wave1.txt")
+hw1_exp5 = calc_hist("../data/5exp_wave1.txt")
+plt.plot(hw1_exp4[1][:-1], hw1_exp4[0]), plt.plot(hw1_exp5[1][:-1], hw1_exp5[0]), plt.show()
+LEN = 32768
+plt.plot(dw1_4exp[0])
+plt.plot(dw1_4exp[0] * np.exp(-25000.0 * np.arange(LEN)))
+plt.show()
+plt.plot(dw1_4exp[0])
+plt.plot(dw1_4exp[0] * np.exp(-1/ 25000.0 * np.arange(LEN)))
+plt.show()
+np.savetxt("../data/dw1_4exp_0.txt", dw1_4exp[700:])
+plt.plot(dw1_4exp[0])
+plt.show()
+np.savetxt("../data/dw1_4exp_0.txt", dw1_4exp[0][700:])
+plt.plot(dw1_4exp[0] * np.exp(np.arange(LEN) / 65300))
+plt.plot(dw1_4exp[0])
+plt.show()
+plt.plot(dw1_4exp[0] * np.exp(np.arange(LEN) / 65295))
+plt.plot(dw1_4exp[0])
+plt.show()
+bl = np.mean(dw1_4exp[0][0:300])
+dw10_clr = dw1_4exp[0] - bl
+dw10_PZ = dw1_4exp[0] * np.exp(np.arange(LEN) / 65295)
+for i in range(1, LEN):
+l, k = 4000, 2000
+for i in range(0, LEN):
+	if (i - l - k >= 0):
+cs = np.zeros(LEN)
+for i in range(1, LEN_EVENT):
+	if (i - l - k >= 0):
+		cs[i] = cs[i-1] + dw10_PZ[i] - dw10_PZ[i-k] - dw10_PZ[i-l] + dw10_PZ[i-k-l]
+	elif (i - l >= 0):
+		cs[i] = cs[i-1] + dw10_PZ[i] - dw10_PZ[i-k] - dw10_PZ[i-l]
+	elif (i - k >= 0):
+		cs[i] = cs[i-1] + dw10_PZ[i] - dw10_PZ[i-k]
+	else:
+		cs[i] = cs[i-1] + dw10_PZ[i]
+for i in range(1, LEN):
+	if (i - l - k >= 0):
+for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+LEN_EVENT = LEN
+for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+cTr = dw10_PZ
+for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+plt.plot(dw1_4exp), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+dw10_PZ = dw10_clr * np.exp(np.arange(LEN) / 65295)
+for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+cTr = dw10_PZ
+for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+dw10_PZ = dw10_clr * np.exp(np.arange(LEN) / 65300)
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+dw10_PZ = dw10_clr * np.exp(np.arange(LEN) / 65350)
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+dw10_PZ = dw10_clr * np.exp(np.arange(LEN) / 65500)
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+dw10_PZ = dw10_clr * np.exp(np.arange(LEN) / 68500)
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+dw10_PZ = dw10_clr * np.exp(np.arange(LEN) / 60500)
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+np.savetxt("../data/dw1_4exp_0.txt", dw10_clr[700:])
+dw10_PZ = dw10_clr * np.exp(np.arange(LEN) / 58229)
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.show()
+cTr = dw10_PZ
+ for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+ for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+for i in range(1, LEN_EVENT):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.plot(cs), plt.show()
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.plot(cs/1e4), plt.show()
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.plot(cs/1e3), plt.show()
+np.argmax(cTr)
+np.argmax(dw1_4exp[0])
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.plot(cs/1e3), plt.show()
+np.argmax(cs)
+plt.plot(dw1_4exp[0]), plt.plot(dw10_clr), plt.plot(dw10_PZ), plt.plot(cs/1e3), plt.show()
+l
+k
+def calc_en_trap(d, tau, l, k, bl_shift):
+    cs, cTr = np.zeros(LEN), np.zeros(LEN)
+    idx_max = np.argmax(d)
+    bl_start = idx_max - bl_shift
+    bl_stop = bl_start + 128
+    bl = np.mean(d[bl_start:bl_stop])
+    d_clr = d - bl
+    d_PZ = d_clr * np.exp(np.arange(LEN) / tau)
+    cTr = d_PZ
+    for i in range(1, LEN):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+    idxcs_max = np.argmax(cs)
+    en = np.mean(d[idxcs_max:idxcs_max+1500])
+            
+    return en, cs, d_PZ, d_clr, idxcs_max, bl
+def calc_en_trap(d, tau, l, k, bl_shift):
+    cs, cTr = np.zeros(LEN), np.zeros(LEN)
+    idx_max = np.argmax(d)
+    bl_start = idx_max - bl_shift
+    bl_stop = bl_start + 128
+    bl = np.mean(d[bl_start:bl_stop])
+    d_clr = d - bl
+    d_PZ = d_clr * np.exp(np.arange(LEN) / tau)
+    cTr = d_PZ
+    for i in range(1, LEN):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+    idxcs_max = np.argmax(cs)
+    en = np.mean(d[idxcs_max:idxcs_max+1500])
+            
+    return en, cs, d_PZ, d_clr, idxcs_max, bl
+def calc_en_trap(d, tau, l, k, bl_shift):
+    cs, cTr = np.zeros(LEN), np.zeros(LEN)
+    idx_max = np.argmax(d)
+    bl_start = idx_max - bl_shift
+    bl_stop = bl_start + 128
+    bl = np.mean(d[bl_start:bl_stop])
+    d_clr = d - bl
+    d_PZ = d_clr * np.exp(np.arange(LEN) / tau)
+    cTr = d_PZ
+    for i in range(1, LEN):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+    idxcs_max = np.argmax(cs)
+    en = np.mean(d[idxcs_max:idxcs_max+1500])
+            
+    return en, cs, d_PZ, d_clr, idxcs_max, bl
+def calc_en_trap(d, tau, l, k, bl_shift):
+    cs, cTr = np.zeros(LEN), np.zeros(LEN)
+    idx_max = np.argmax(d)
+    bl_start = idx_max - bl_shift
+    bl_stop = bl_start + 128
+    bl = np.mean(d[bl_start:bl_stop])
+    d_clr = d - bl
+    d_PZ = d_clr * np.exp(np.arange(LEN) / tau)
+    cTr = d_PZ
+    for i in range(1, LEN):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+    idxcs_max = np.argmax(cs)
+    en = np.mean(d[idxcs_max:idxcs_max+1500])
+            
+    return en, cs, d_PZ, d_clr, idxcs_max, bl
+def calc_en_trap(d, tau, l, k, bl_shift):
+    cs, cTr = np.zeros(LEN), np.zeros(LEN)
+    idx_max = np.argmax(d)
+    bl_start = idx_max - bl_shift
+    bl_stop = bl_start + 128
+    bl = np.mean(d[bl_start:bl_stop])
+    d_clr = d - bl
+    d_PZ = d_clr * np.exp(np.arange(LEN) / tau)
+    cTr = d_PZ
+    for i in range(1, LEN):
+        if (i - l - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l] + cTr[i-k-l]
+        elif (i - l >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k] - cTr[i-l]
+        elif (i - k >= 0):
+            cs[i] = cs[i-1] + cTr[i] - cTr[i-k]
+        else:
+            cs[i] = cs[i-1] + cTr[i]
+    idxcs_max = np.argmax(cs)
+    en = np.mean(d[idxcs_max:idxcs_max+1500])
+            
+    return en, cs, d_PZ, d_clr, idxcs_max, bl
+from funcs import calc_en_trap
+from .funcs import calc_en_trap
+from funcs import calc_en_trap
+from funcdef calc_en_trap(d, tau, l, k, bl_shift):s import calc_en_trap
+    cs, cTr = np.zeros(LEN), np.zeros(LEN)
+    idx_max = np.argmax(d)
+    bl_start = idx_max - bl_shift
+    bl_stop = bl_start + 128
+from funcs import calc_en_trap
+from histo_calc import load_data
+dw1_exp4 = load_data("../data/4exp_wave1.txt")
+dw1_exp4 = load_data("../data/4exp_wave1.txt", stop=500)
+en = np.zeros(500)
+import numpy as np
+en = np.zeros(500)
+for i, d in enumerate(dw1_exp4):
+	en[i] = calc_en_trap(d, 58229, 2000, 1000, 300)[0]
+LEN = 32768
+for i, d in enumerate(dw1_exp4):
+	en[i] = calc_en_trap(d, 58229, 2000, 1000, 300)[0]
+from funcs import calc_en_trap
+from histo_calc import load_data
+dw1_exp4 = load_data("../data/4exp_wave1.txt", stop=500)
+for i, d in enumerate(dw1_exp4):
+	en[i] = calc_en_trap(d, 58229, 2000, 1000, 300)[0]
+en = np.zeros(500)
+import numpy as np
+en = np.zeros(500)
+for i, d in enumerate(dw1_exp4):
+	en[i] = calc_en_trap(d, 58229, 2000, 1000, 300)[0]
+import matplotlib.pyplot as plt
+hist = np.histogram(en/1e6, bins=np.arange(0, 4095))
+max(en)
+from histo_calc import load_data
+from funcs import calc_en_trap
+import matplotlib.pyplot as plt
+import numpy as np
+dw1_exp4 = load_data("../data/4exp_wave1.txt", stop=500)
+en = np.zeros(500)
+for i, d in enumerate(dw1_exp4):
+	en[i] = calc_en_trap(d, 58229, 2000, 1000, 300)[0]
+max(en)
+hist = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist[1][:-1], hist[0])
+plt.show()
+np.where(en/1.0e4 < 80)
+plt.plot(dw1_exp4[1]), plt.show()
+plt.plot(dw1_exp4[3]), plt.show()
+hist = np.histogram(en[::2]/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist[1][:-1], hist[0])
+plt.plot(hist[1][:-1], hist[0]), plt.show()
+np.where(en/1.0e4 > 400)
+plt.plot(dw1_exp4[2]), plt.show()
+plt.plot(dw1_exp4[2]), plt.plot(dw1_exp4[0]), plt.show()
+e0, cs0, d_PZ0, d_clr0, idxcs_max_0, bl0 = calc_en_trap(dw1_exp4[0], 58229, 2000, 1000, 300)
+e0
+e0 / 1e4
+e2, cs2, d_PZ2, d_clr2, idxcs_max_2, bl2 = calc_en_trap(dw1_exp4[2], 58229, 2000, 1000, 300)
+e2 / 1e4
+plt.plot(cs0, cs1), plt.show()
+plt.plot(cs0, cs4), plt.show()
+plt.plot(cs0, cs2), plt.show()
+plt.plot(cs0), plt.plot(cs2), plt.show()
+plt.plot(cs0), plt.show()
+plt.plot(cs2), plt.show()
+plt.plot(cs0), plt.plot(cs2), plt.plot(d_PZ0), plt.show()
+plt.plot(cs0/1e4), plt.plot(cs2/1e4), plt.plot(d_PZ0), plt.show()
+plt.plot(cs0/1e4), plt.plot(cs2/1e4), plt.plot(d_PZ0), plt.plot(d_PZ2), plt.show()
+plt.plot(cs0/1e3), plt.plot(cs2/1e3), plt.plot(d_PZ0), plt.plot(d_PZ2), plt.show()
+plt.plot(cs0/1e4), plt.plot(cs2/1e4), plt.plot(d_PZ0), plt.plot(d_PZ2), plt.plot(d_clr0), plt.show()
+plt.plot(cs0/1e4), plt.plot(cs2/1e4), plt.plot(d_PZ0), plt.plot(d_PZ2), plt.plot(d_clr0), plt.plot(dw1_exp4[0]), plt.show()
+idxcs_max_0
+bl0
+plt.plot(cs0/1e4), plt.plot(cs2/1e4), plt.plot(d_PZ0), plt.plot(d_PZ2), plt.plot(d_clr0), plt.plot(dw1_exp4[0]), plt.show()
+np.argmax(dw1_exp4[0])
+plt.plot(cs0/1e4), plt.plot(cs2/1e4), plt.plot(d_PZ0), plt.plot(d_PZ2), plt.plot(d_clr0), plt.plot(dw1_exp4[0]), plt.show()
+for i, d in enumerate(dw1_exp4):
+	en[i] = calc_en_trap(d, 58229, 2000, 1000, 400)[0]
+plt.plot(hist[1][:-1], hist[0]), plt.show()
+np.where(en/1.0e4 > 400)
+hist = np.histogram(en[::2]/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist[1][:-1], hist[0]), plt.show()
+np.ehre(en/1.0e4 < 220)
+np.where(en/1.0e4 < 220)
+np.where(en/1.0e4 < 220).shape[0]
+np.where(en/1.0e4 < 220)
+np.where(en/1.0e4 < 220)[0]
+len(np.where(en/1.0e4 < 220)[0])
+len(np.where(en/1.0e4 > 220)[0])
+en[::2]/1.0e4
+hist = np.histogram(en[::2]/1.0e4, bins = np.arange(0, 4095))
+len(en[::2]/1.0e4)
+e499, cs499, d_PZ499, d_clr499, idxcs_max499, bl499 = calc_en_trap(dw1_exp4[2], 58229, 2000, 1000, 400)
+e499
+e499/1e4
+e498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp4[2], 58229, 2000, 1000, 400)
+e497 = cal
+e499, cs499, d_PZ499, d_clr499, idxcs_max499, bl499 = calc_en_trap(dw1_exp4[499], 58229, 2000, 1000, 400)
+e499/1e4
+e498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp4[498], 58229, 2000, 1000, 400)
+e498/1e4
+plt.plot(cs498/1e4), plt.plot(d_PZ498), plt.plot(d_clr498), plt.plot(dw1_exp4[498]), plt.show()
+plt.plot(cs498/1e4), plt.plot(d_PZ498), plt.plot(d_clr498), plt.plot(dw1_exp4[498]), plt.show()
+import matplotlib.pyplot as plt
+import numpy as np
+from funcs import calc_en_trap
+exit
+ls
+import numpy as np
+from funcs import calc_en_trap
+import matplotlib.pyplot as plt
+LEN=32768
+dw1_ex12 = load_data("../data/12exp_wave1.txt", stop=500)
+dw1_ex12 = load_data("../data/13exp_wave1.txt", stop=500)
+dw1_exp13 = load_data("../data/13exp_wave1.txt", stop=450)
+plt.plot(dw1_exp13[0]), plt.show()
+plt.plot(dw1_exp13[2]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1], 58229, 2000, 1000, 400)
+e1
+idxcs_max1, bl1
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1], 28000, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(dw1_exp13[1]), plt.show()
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(dw1_exp13[1]), plt.show()
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 28000, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, -28000, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 58000, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 282000, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+np.savetxt("../data/13exp_1sgnl.txt", -dw1_exp13[1][:800]+10000)
+np.savetxt("../data/13exp_1sgnl.txt", -dw1_exp13[1][800:]+10000)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+np.savetxt("../data/13exp_1sgnl.txt", -dw1_exp13[1][650:]+10000)
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 15860, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+np.savetxt("../data/13exp_1sgnl.txt", -dw1_exp13[1][1000:]+10000)
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 12860, 2000, 1000, 400)
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 15860, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 12860, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 10860, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 5860, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 7860, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+e1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 8860, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+np.savetxt("../data/13exp_1sgnl.txt", -np.array([np.sum(dw1_exp13[1][i-30:i])/30 for i in range(30, LEN)]) + 10000)
+np.savetxt("../data/13exp_1sgnl.txt", -np.array([np.sum(dw1_exp13[1][i-30:i])/30 for i in range(30, LEN)])[650:] + 10000)
+np.savetxt("../data/13exp_1sgnl_log.txt", np.log(-np.array([np.sum(dw1_exp13[1][i-30:i])/30 for i in range(30, LEN)])[650:] + 10000))
+np.savetxt("../data/13exp_1sgnl.txt", -np.array([np.sum(dw1_exp13[1][i-30:i])/30 for i in range(30, LEN)])[650:15000] + 10000)
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 13308, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+np.savetxt("../data/13exp_1sgnl.txt", -dw1_exp13[1][650:15000]+10000)
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 13300, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 12300, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 10300, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 7300, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 8300, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 9300, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+y_PZ = np.zeros(LEN)
+dtau = 13300
+g, m = dtau / (1 - dtau), 2 * (1 - dtau) / (1 + dtau)
+for i in range(1, LEN):
+	y_PZ[i] = m * (g * dw1_exp13[i] + np.sum(d[:i]))
+	y_PZ[i] = m * (g * dw1_exp13[1][i] + np.sum(dw1_exp13[1][:i]))
+for i in range(1, LEN):
+	y_PZ[i] = m * (g * dw1_exp13[1][i] + np.sum(dw1_exp13[1][:i]))	
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.plot(y_PZ), plt.show()
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.plot(y_PZ/1e8), plt.show()
+y = np.diff(dw1_exp13[650:15000])
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.plot(y), plt.show()
+y = np.diff(dw1_exp13[1][650:15000])
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.plot(y), plt.show()
+y = np.diff(dw1_exp13[1][:15000])
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.plot(y), plt.show()
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.plot(y*1e3), plt.show()
+plt.plot(y*1e2), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+y = np.diff(-dw1_exp13[1][:15000])
+plt.plot(y*1e2), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+plt.plot(y), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show(
+plt.plot(y), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+np.argmax(y)
+plt.plot(y), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+np.argmax(y[10:])
+plt.plot(y), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+import sys
+sys.modules
+sys.modules["calc_en_trap"]
+sys.modules["funcs.calc_en_trap"]
+sys.modules["funcs"]
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 13300, 2000, 1000, 400)
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 13300, 2000, 1000, 400)
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 13300, 2000, 1000, 400)
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 13300, 2000, 1000, 400)
+plt.plot(y), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(-dw1_exp13[1] + 10000, 13300, 2000, 1000, 400)
+plt.plot(y), plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(10000 - dw1_exp13[1]), plt.show()
+plt.plot(dw1_exp5[1]), plt.show()
+plt.plot(dw1_exp5[4]), plt.show()
+plt.plot(np.log(dw1_exp5[4])), plt.show()
+exit()
+from funcs import calc_en_trap
+import sys
+import matplotlib.pyplot as plt
+import numpy as np
+from histo_calc import load_data
+dw1_exp13 = load_data("../data/13exp_wave1.txt", stop=450)
+plt.plot(dw1_exp13[1]), plt.show()
+plt.plot(-dw1_exp13[1]), plt.show()
+plt.plot(-dw1_exp13[1] + 10000), plt.show()
+plt.plot(-dw1_exp13[1] + 12000), plt.show()
+dw1_exp13 = -dw1_exp13 + 12000
+plt.plot(-dw1_exp13[1] + 12000), plt.show()
+plt.plot(dw1_exp13[1]), plt.show()
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(dw1_exp13[1], 13300, 2000, 1000, 400)
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(dw1_exp13[1]), plt.show()
+np.savetxt("../data/13exp_1sgnl.txt", d_clr1[1][650:15000])
+np.savetxt("../data/13exp_1sgnl.txt", d_clr11[650:15000])
+np.savetxt("../data/13exp_1sgnl.txt", d_clr1[650:15000])
+np.savetxt("../data/13exp_1sgnl.txt", d_clr1[1000:15000])
+np.savetxt("../data/13exp_1sgnl.txt", d_clr1[1000:8000])
+en60, cs60, d_PZ60, d_clr60, idxcs_max60, bl60 = calc_en_trap(dw1_exp13[60], 13300, 2000, 1000, 400)
+np.savetxt("../data/13exp_60sgnl.txt", d_clr60[1000:8000])
+np.savetxt("../data/13exp_60sgnl.txt", d_clr60[500:8000])
+np.savetxt("../data/13exp_60sgnl.txt", d_clr60[750:8000])
+en60, cs60, d_PZ60, d_clr60, idxcs_max60, bl60 = calc_en_trap(dw1_exp13[60], 8144, 2000, 1000, 400)
+plt.plot(cs60/1e4), plt.plot(d_PZ60), plt.plot(d_clr60), plt.plot(dw1_exp13[60]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en60n, cs60n, d_PZ60n, d_clr60n, idxcs_max60n, bl60n = calc_en_trap(dw1_exp13[60], 8144, 2000, 1000, 400)
+plt.plot(cs60/1e4), plt.plot(d_PZ60), plt.plot(d_clr60), plt.plot(dw1_exp13[60]), plt.plot(d_clr60n), plt.show()
+plt.plot(cs60/1e4), plt.plot(d_PZ60), plt.plot(d_clr60), plt.plot(dw1_exp13[60]), plt.plot(d_PZ60n), plt.show()
+plt.plot(cs60/1e4), plt.plot(d_PZ60), plt.plot(d_clr60), plt.plot(dw1_exp13[60]), plt.plot(d_PZ60n), plt.plot(cs60n/1e4), plt.show()
+en = np.zeros(450)
+for i, d in enumerate(dw1_exp13):
+del sys.modules["funcs"], from funcs import calc_en_trap
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en60n, cs60n, d_PZ60n, d_clr60n, idxcs_max60n, bl60n = calc_en_trap(dw1_exp13[60], 8144, 2000, 1000, 300)
+en60n, idxcs_max60n, bl60n
+plt.plot(cs60n/1e4), plt.plot(d_PZ60n), plt.plot(d_clr60n), plt.plot(dw1_exp13[10]), plt.show()
+y_MA = np.array([np.sum(dw1_exp13[60][i-30:i])/30 for i in range(30, LEN)])
+LEN = 32768
+y_MA = np.array([np.sum(dw1_exp13[60][i-30:i])/30 for i in range(30, LEN)])
+y_diff = np.array([(d_MA[i+50] - d_MA[i-50]) / 100. for i in range(50, LEN-30-50)])
+y_diff = np.array([(y_MA[i+50] - y_MA[i-50]) / 100. for i in range(50, LEN-30-50)])
+plt.plot(cs60n/1e4), plt.plot(d_PZ60n), plt.plot(d_clr60n), plt.plot(dw1_exp13[60]), plt.plot(y_MA), plt.plot(y_diff*1e3), plt.show()
+plt.plot(cs60n/1e4), plt.plot(d_PZ60n), plt.plot(d_clr60n), plt.plot(dw1_exp13[60]), plt.plot(y_MA), plt.plot(y_diff*1e1), plt.show()
+np.argmax(y_diff)
+plt.plot(cs60n/1e4), plt.plot(d_PZ60n), plt.plot(d_clr60n), plt.plot(dw1_exp13[60]), plt.plot(y_MA), plt.plot(y_diff*1e1), plt.show()
+en100, cs100, d_PZ100, d_clr100, idxcs_max100, bl100 = calc_en_trap(dw1_exp13[100], 8144, 2000, 1000, 300)
+y_MA = np.array([np.sum(dw1_exp13[100][i-30:i])/30 for i in range(30, LEN)])
+y_diff = np.array([(y_MA[i+50] - y_MA[i-50]) / 100. for i in range(50, LEN-30-50)])
+plt.plot(cs100/1e4), plt.plot(d_PZ100), plt.plot(d_clr100), plt.plot(dw1_exp13[100]), plt.plot(y_MA), plt.plot(y_diff*1e1), plt.show()
+idxcs_max100
+plt.plot(cs100/1e4), plt.plot(d_PZ100), plt.plot(d_clr100), plt.plot(dw1_exp13[100]), plt.plot(y_MA), plt.plot(y_diff*1e1), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en100, cs100, d_PZ100, d_clr100, idxcs_max100, bl100 = calc_en_trap(dw1_exp13[100], 8144, 2000, 1000, 300)
+en100/1e4
+idxcs_max100
+plt.plot(cs100/1e4), plt.plot(d_PZ100), plt.plot(d_clr100), plt.plot(dw1_exp13[100]), plt.plot(y_MA), plt.plot(y_diff*1e1), plt.show()
+for i, d in enumerate(dw1_exp13):
+	en[i] = calc_en_trap(d, 8144, 2000, 1000, 300)[0]
+len(np.where(en/1e4 > 4095)[0])
+en[:50]
+en[:50]/1e4
+hist = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist[1][:-1], hist[0]), plt.show()
+hist = hist_att4
+hist_att4 = hist
+dw1_exp14 = load_data("../data/14exp_wave1.txt", stop=450)
+dw1_exp14 = -dw1_exp14 + 12000
+hist_att2 = hist
+for i, d in enumerate(dw1_exp14):
+	en[i] = calc_en_trap(d, 8144, 2000, 1000, 300)[0]
+hist_att4 = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+en[:50]
+plt.plot(hist_att4[1][:-1], hist_att4[0]), plt.plot(hist_att2[1][:-1], hist_att2[0]), plt.show()
+dw1_exp12 = -load_data("../data/12exp_wave1.txt", stop=450) + 12000
+for i, d in enumerate(dw1_exp12):
+	en[i] = calc_en_trap(d, 8144, 2000, 1000, 300)[0]
+hist_att1 = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_att4[1][:-1], hist_att4[0]), plt.plot(hist_att2[1][:-1], hist_att2[0]), plt.plot(hist_att1[1][:-1], hist_att1[0]), plt.show()
+dw1_exp16 = -load_data("../data/16exp_wave1.txt", stop=450) + 12000
+for i, d in enumerate(dw1_exp16):
+	en[i] = calc_en_trap(d, 8144, 2000, 1000, 300)[0]
+hist_att16 = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_att16[1][:-1], hist_att16[0]), plt.plot(hist_att4[1][:-1], hist_att4[0]), plt.plot(hist_att2[1][:-1], hist_att2[0]), plt.plot(hist_att1[1][:-1], hist_att1[0]), plt.show()
+plt.plot(hist_att16[1][:-1], hist_att16[0], label="Attenuation 16"), plt.plot(hist_att4[1][:-1], hist_att4[0], label="Att 8"), plt.plot(hist_att2[1][:-1], hist_att2[0], label="Att 2"), plt.plot(hist_att1[1][:-1], hist_att1[0], label="Att 1"), plt.legen(), plt.show()
+plt.plot(hist_att16[1][:-1], hist_att16[0], label="Attenuation 16"), plt.plot(hist_att4[1][:-1], hist_att4[0], label="Att 8"), plt.plot(hist_att2[1][:-1], hist_att2[0], label="Att 2"), plt.plot(hist_att1[1][:-1], hist_att1[0], label="Att 1"), plt.legend(), plt.show()
+plt.plot(hist_att16[1][:-1], hist_att16[0], label="Attenuation 16"), plt.plot(hist_att4[1][:-1], hist_att4[0], label="Att 8"), plt.plot(hist_att2[1][:-1], hist_att2[0], label="Att 2"), plt.plot(hist_att1[1][:-1], hist_att1[0], label="Att 1"), plt.show()
+plt.plot(hist_att16[1][:-1], hist_att16[0], label="Attenuation 16"), plt.plot(hist_att4[1][:-1], hist_att4[0], label="Att 8"), plt.plot(hist_att2[1][:-1], hist_att2[0], label="Att 2"), plt.plot(hist_att1[1][:-1], hist_att1[0], label="Att 1"), plt.legend(loc="Upper right), plt.show()
+plt.plot(hist_att16[1][:-1], hist_att16[0], label="Attenuation 16"), plt.plot(hist_att4[1][:-1], hist_att4[0], label="Att 8"), plt.plot(hist_att2[1][:-1], hist_att2[0], label="Att 2"), plt.plot(hist_att1[1][:-1], hist_att1[0], label="Att 1"), plt.legend(loc="Upper right"), plt.show()
+dw1_exp3 = -load_data("../data/3exp_wave1.txt", stop=450)
+plt.plot(dw1_exp[1]), plt.plot(dw1_exp[5]), plt.show()
+plt.plot(dw1_exp3[1]), plt.plot(dw1_exp3[5]), plt.show()
+plt.plot(np.log(dw1_exp3[1][600:])), plt.show()
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(dw1_exp3[1], 8144, 2000, 1000, 300)
+plt.plot(dw1_exp3[1]), plt.plot(d_clr1), plt.show()
+plt.plot(np.log(d_clr1[600:])), plt.show()
+np.savetxt("../data/3exp_1sgnl.txt", d_clr1[620:])
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 8144, 2000, 1000, 300)
+np.savetxt("../data/3exp_5sgnl.txt", d_clr5[620:])
+np.savetxt("../data/3exp_5sgnl.txt", d_clr5[1600:])
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 2000, 1000, 300)
+en5/1e4, idxcs_max5, bl5
+plt.plot(cs5/1e4), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]),  plt.show()
+en5/1e3, idxcs_max5, bl5
+plt.plot(cs5/1e4), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]),  plt.show()
+plt.plot(cs5/1e3), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]),  plt.show()
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]),  plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+plt.plot(cs5/1e4), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]),  plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 2000, 1000, 300)
+en5/1e3, idxcs_max5, bl5
+plt.plot(cs5/1e4), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 2000, 1000, 300)
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 2000, 1000, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 2000, 1000, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 5000, 1000, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 10000, 1000, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 10000, 8000, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 10000, 500, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 10000, 100, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+plt.plot(cs5/1e1), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 10000, 9000, 300)
+plt.plot(cs5/1e1), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 10000, 2000, 300)
+plt.plot(cs5/1e1), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+plt.plot(cs5/1e4), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 15000, 3000, 300)
+plt.plot(cs5/1e2), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+plt.plot(cs5/1e3), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+idxcs_max5
+plt.plot(cs5/1e3), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+idxcs_max5
+en5/1e3
+plt.plot(cs5/1e3), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 15000, 3000, 300)
+en5/1e3, idxcs_max5
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 15000, 3000, 300)
+plt.plot(cs5/1e3), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.show()
+en52, cs52, d_PZ52, d_clr52, idxcs_max52, bl52 = calc_en_trap(dw1_exp3[52], 27710, 15000, 3000, 300)
+en52/1e3, idxcs_max52
+plt.plot(cs52/1e3), plt.plot(d_PZ52), plt.plot(d_clr52), plt.plot(dw1_exp3[52]), plt.show()
+y_MA = np.array([np.sum(dw1_exp3[52][i-30:i])/30 for i in range(30, LEN)])
+plt.plot(cs52/1e3), plt.plot(d_PZ52), plt.plot(d_clr52), plt.plot(dw1_exp3[52]), plt.plot(y_MA), plt.show()
+y_diff = np.array([(y_MA[52][i+50] - y_MA[i-50]) / 100. for i in range(50, LEN-30-50)])
+y_diff = np.array([(y_MA[i+50] - y_MA[i-50]) / 100. for i in range(50, LEN-30-50)])
+plt.plot(cs52/1e3), plt.plot(d_PZ52), plt.plot(d_clr52), plt.plot(dw1_exp3[52]), plt.plot(y_MA), plt.plot(y_diff), plt.show()
+plt.plot(cs52/1e3), plt.plot(d_PZ52), plt.plot(d_clr52), plt.plot(dw1_exp3[52]), plt.plot(y_MA), plt.plot(y_diff*1e3), plt.show()
+np.argmax(y_diff)
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en52, cs52, d_PZ52, d_clr52, idxcs_max52, bl52 = calc_en_trap(dw1_exp3[52], 27710, 15000, 3000, 40)
+idxcs_max52 - 6000
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en52, cs52, d_PZ52, d_clr52, idxcs_max52, bl52 = calc_en_trap(dw1_exp3[52], 27710, 15000, 3000, 40)
+en52/1e3, idxcs_max52
+en52, cs52, d_PZ52, d_clr52, idxcs_max52, bl52 = calc_en_trap(dw1_exp3[52], 27710, 15000, 3000, 30)
+en52/1e3, idxcs_max52
+plt.plot(cs52/1e3), plt.plot(d_PZ52), plt.plot(d_clr52), plt.plot(dw1_exp3[52]), plt.plot(y_MA), plt.plot(y_diff*1e3), plt.show()
+np.savetxt("../data/3exp_52sgnl.txt", d_clr52[620:])
+np.savetxt("../data/3exp_52sgnl.txt", d_clr52[1020:15000])
+en52, cs52, d_PZ52, d_clr52, idxcs_max52, bl52 = calc_en_trap(dw1_exp3[52], 12800, 15000, 3000, 30)
+en52/1e3, idxcs_max52
+plt.plot(cs52/1e3), plt.plot(d_PZ52), plt.plot(d_clr52), plt.plot(dw1_exp3[52]), plt.plot(y_MA), plt.plot(y_diff*1e3), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 15000, 3000, 30)
+en5/1e3, idxcs_max5
+plt.plot(cs5/1e3), plt.plot(d_PZ5), plt.plot(d_clr5), plt.plot(dw1_exp3[5]), plt.plot(y_MA), plt.plot(y_diff*1e3), plt.show()
+en51, cs51, d_PZ51, d_clr51, idxcs_max51, bl51 = calc_en_trap(dw1_exp3[51], 27710, 15000, 3000, 30)
+en51/1e3, idxcs_max51
+plt.plot(cs51/1e3), plt.plot(d_PZ51), plt.plot(d_clr51), plt.plot(dw1_exp3[51]), plt.plot(y_MA), plt.plot(y_diff*1e3), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en51, cs51, d_PZ51, d_clr51, idxcs_max51, bl51 = calc_en_trap(dw1_exp3[51], 27710, 15000, 3000, 30)
+en51/1e3, idxcs_max51
+for i, d in enumerate(dw1_exp3):
+	en[i] = calc_en_trap(d, 27710, 15000, 3000, 30)
+	print(i)
+	en[i] = calc_en_trap(d, 27710, 15000, 3000, 30)[0]
+	print(i)
+hist_Ta = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+len(np.where(en/1e4 > 4095)[0])
+np.where(en/1e4 > 4095)
+plt.plot(hist_Ta[1][:-1], hist_Ta[0]), plt.show()
+en[:20]
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(dw1_exp3[1], 27710, 15000, 3000, 30)
+en1, idxcs_max1
+plt.plot(cs1/1e4), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(dw1_exp3[1]), plt.show()
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp3[2], 27710, 15000, 3000, 30)
+en2, idxcs_max2
+plt.plot(cs2/1e4), plt.plot(d_PZ2), plt.plot(d_clr2), plt.plot(dw1_exp3[2]), plt.show()
+en3, cs3, d_PZ3, d_clr3, idxcs_max3, bl3 = calc_en_trap(dw1_exp3[3], 27710, 15000, 3000, 30)
+plt.plot(cs3/1e4), plt.plot(d_PZ3), plt.plot(d_clr3), plt.plot(dw1_exp3[3]), plt.show()
+idxcs_max3, en3
+plt.plot(cs3/1e4), plt.plot(d_PZ3), plt.plot(d_clr3), plt.plot(dw1_exp3[3]), plt.show()
+idxcs_max3, en3/e4
+idxcs_max3, en3/1e4
+plt.plot(cs3/1e4), plt.plot(d_PZ3), plt.plot(d_clr3), plt.plot(dw1_exp3[3]), plt.show()
+dw1_exp3 = load_data("../data/3exp_wave1.txt", stop=7660)
+en = np.zeros(7660)
+for i, d in enumerate(dw1_exp3):
+	en[i] = calc_en_trap(d, 27710, 15000, 3000, 30)[0]
+	print(i)
+hist_Tan = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+hist_Tan = np.histogram(en/1.0e3, bins = np.arange(0, 4095))
+plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+len(np.where(en/1e3 > 4095)[0])
+len(np.where(en/1e4 > 4095)[0])
+len(np.where(en/1e5 > 4095)[0])
+hist_Tan = np.histogram(en/1.0e5, bins = np.arange(0, 4095))
+plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+len(np.where(en/1e2 > 4095)[0])
+hist_Tan = np.histogram(en/1.0e2, bins = np.arange(0, 4095))
+plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+hist_Tan = np.histogram(en/1.0e2, bins = np.arange(0, 40950))
+plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+hist_Tan = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+from funcs import CPpzc_RC1
+from funcs import calc_CPpzc_RC1
+del sys.modules["funcs"]
+from funcs import calc_CPpzc_RC1
+from funcs import calc_en_trap(
+from funcs import calc_en_trap
+en1, V01, dat_clr1, idx_max1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 10000, 30)
+en1
+plt.plot(V01), plt.plot(dat_clr1), plt.show()
+en1, V01, dat_clr1, idx_max1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 1000, 30)
+plt.plot(V01), plt.plot(dat_clr1), plt.show()
+plt.plot(dat_clr1), plt.plot(V01), plt.show()
+en1, V01, dat_clr1, idx_max1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 100, 30)
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1
+en1, V01, dat_clr1, idx_max1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 100, 30)
+plt.plot(dat_clr1), plt.plot(V01), plt.show()
+en1, V01, dat_clr1, idx_max1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 500, 30)
+plt.plot(dat_clr1), plt.plot(V01), plt.show()
+en1, V01, dat_clr1, idx_max1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 2000, 30)
+plt.plot(dat_clr1), plt.plot(V01), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1
+en1, V01, dat_clr1, idx_max1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 2000, 30)
+en1, V01, dat_clr1 = calc_CPpzc_RC1(dw1_exp3[1], 27710, 2000, 30)
+en1
+en1/1e4
+en[1]/1e4
+en[1]/1e3
+plt.plot(dat_clr1), plt.plot(V01), plt.show()
+en_RC = np.zeros(7660)
+for i, d in enumerate(dw1_exp3):
+	print(i)
+for i, d in enumerate(dw1_exp3):
+	en_RC[i] = calc_CPpzc_RC1(dw1_exp3[1], 27710, 2000, 30)[0]
+	print(i)
+hist_Tan = np.histogram(en_RC/1.0e4, bins = np.arange(0, 4095))
+len(np.where(en_RC/1.0e4 > 4095)[0])
+en[:20]
+hist_Ta_RC = np.histogram(en_RC/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.show()
+en[:20]/1e4
+en[:20]/1.0e4
+en_RC[:20]/1.0e4
+en_RC[:20]
+en[:50]
+en_RC[:50]
+for i, d in enumerate(dw1_exp3):
+	en_RC[i] = calc_CPpzc_RC1(d, 27710, 2000, 30)[0]
+	print(i, en_RC[i]/1e4)
+en_RC[:20]/1e4
+len(np.where(en_RC/1e4 > 4095))
+len(np.where(en_RC/1e4 > 4095)[0])
+len(np.where(en_RC/1e5 > 4095)[0])
+hist_Ta_RC = np.histogram(en_RC/1.0e5, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.show()
+hist_Ta_RC = np.histogram(en_RC/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.show()
+hist_Ta_RC = np.histogram(en_RC/1.0e2, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.show()
+hist_Ta_RC = np.histogram(en_RC/1.0e3, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.show()
+hist_Ta_RC = np.histogram(en_RC/5.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.show()
+hist_Tan = np.histogram(en/1.0e4, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+hist_Tan = np.histogram(en/1.0e3, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+hist_Tan = np.histogram(en[::2]/1.0e3, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+hist_Tan = np.histogram(en/1.0e3, bins = np.arange(0, 4095))
+hist_Ta_RC = np.histogram(en_RC/5.0e3, bins = np.arange(0, 4095))
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0], lw=0), plt.show()
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0], ms=5, lw=0), plt.show()
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0], marker="o", ms=5, lw=0), plt.show()
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0], marker="*", ms=1, lw=0), plt.show()
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0], lw=0), plt.show()
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+en_exp12 = np.zeros(450)
+for i, d in enumerate(dw1_exp12):
+	en_exp12[i] = calc_CPpzc_RC1(d, 8144, 2000, 30)[0]
+hist_exp12 = np.histogram(en_exp12/5.0e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.show()
+en_exp12/5e3[:50]
+en_exp12[:50]/5e3
+hist_exp12 = np.histogram(en_exp12/1e4, bins = np.arange(0, 4095))
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.show()
+en_exp12[:50]/1e4
+hist_exp12 = np.histogram(en_exp12/1e5, bins = np.arange(0, 4095))
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.show()
+for i, d in enumerate(dw1_exp14):
+for i, d in enumerate(dw1_exp14):
+	en_exp14[i] = calc_CPpzc_RC1(d, 8144, 2000, 30)[0]
+hist_exp14 = np.histogram(en_exp14/1e4, bins = np.arange(0, 4095))
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.plot(hist_exp14[1][:-1], hist_exp14[0]), plt.show()
+hist_exp14 = np.histogram(en_exp14/1e5, bins = np.arange(0, 4095))
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.plot(hist_exp14[1][:-1], hist_exp14[0]), plt.show()
+plt.plot(hist_Ta_RC[1][:-1], hist_Ta_RC[0]), plt.plot(hist_Tan[1][:-1], hist_Tan[0]), plt.show()
+plt.plot(dw1_exp13[1]), plt.show()
+plt.plot(dw1_exp13[1]), plt.plot(dw1_exp3[1]), plt.show()
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.plot(hist_exp14[1][:-1], hist_exp14[0]), plt.show()
+en1_12, V01_12, dat_clr12 = calc_CPpzc_RC1(dw1_exp12[1], 8144, 2000, 30)
+en1_14, V01_14, dat_clr14 = calc_CPpzc_RC1(dw1_exp14[1], 8144, 2000, 30)
+en1_12/1e4
+en1_12/1e5, en1_14/1e5
+plt.plot(V01_12), plt.plot(V01_14), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1
+from funcs import calc_en_trap
+for i, d in enumerate(dw1_exp14):
+	en_exp14[i] = calc_CPpzc_RC1(d, 8144, 2000, 30)[0]
+for i, d in enumerate(dw1_exp12):
+	en_exp12[i] = calc_CPpzc_RC1(d, 8144, 2000, 30)[0]
+for i, d in enumerate(dw1_exp13):
+en_exp13 = np.zeros(450)
+for i, d in enumerate(dw1_exp13):
+	en_exp13[i] = calc_CPpzc_RC1(d, 8144, 2000, 30)[0]
+en_exp13[1]/1e5
+en_exp16 = np.zeros(450)
+for i, d in enumerate(dw1_exp16):
+hist_exp14 = np.histogram(en_exp14/1e5, bins = np.arange(0, 4095))
+hist_exp12 = np.histogram(en_exp12/1e5, bins = np.arange(0, 4095))
+hist_exp13 = np.histogram(en_exp13/1e5, bins = np.arange(0, 4095))
+hist_exp16 = np.histogram(en_exp16/1e5, bins = np.arange(0, 4095))
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.plot(hist_exp13[1][:-1], hist_exp13[0]), plt.plot(hist_exp14[1][:-1], hist_exp14[0]), plt.plot(hist_exp16[1][:-1], histy_exp16[0]), plt.show()
+plt.plot(hist_exp12[1][:-1], hist_exp12[0]), plt.plot(hist_exp13[1][:-1], hist_exp13[0]), plt.plot(hist_exp14[1][:-1], hist_exp14[0]), plt.plot(hist_exp16[1][:-1], hist_exp16[0]), plt.show()
+en3, cs3, d_PZ3, d_clr3, idxcs_max3, bl3 = calc_en_trap(dw1_exp3[3], 27710, 15000, 3000, 30)
+en3/1e4
+plt.plot(cs3/1e4), plt.plot(d_PZ3), plt.plot(d_clr3), plt.plot(dw1_exp3[3]), plt.show()
+en5, cs5, d_PZ5, d_clr5, idxcs_max5, bl5 = calc_en_trap(dw1_exp3[5], 27710, 15000, 3000, 30)
+en5/1e4, idxcs_max5
+en51, cs51, d_PZ51, d_clr51, idxcs_max51, bl51 = calc_en_trap(dw1_exp3[51], 27710, 15000, 3000, 30)
+en51/1e4, idxcs_max51
+plt.plot(cs51/1e4), plt.plot(d_PZ51), plt.plot(d_clr51), plt.plot(dw1_exp3[51]), plt.show()
+en123, cs123, d_PZ123, d_clr123, idxcs_max123, bl123 = calc_en_trap(dw1_exp3[123], 27710, 15000, 3000, 30)
+plt.plot(cs123/1e4), plt.plot(d_PZ123), plt.plot(d_clr123), plt.plot(dw1_exp3[123]), plt.show()
+en123/1e4
+en122, cs122, d_PZ122, d_clr122, idxcs_max122, bl122 = calc_en_trap(dw1_exp3[122], 27710, 15000, 3000, 30)
+plt.plot(cs122/1e4), plt.plot(d_PZ122), plt.plot(d_clr122), plt.plot(dw1_exp3[122]), plt.show()
+np.savetxt("../data/3exp_122sgnl.txt", dw1_exp3[1000:])
+np.savetxt("../data/3exp_122sgnl.txt", dw1_exp3[122][1000:])
+en122, cs122, d_PZ122, d_clr122, idxcs_max122, bl122 = calc_en_trap(dw1_exp3[122], 72593, 15000, 3000, 30)
+plt.plot(cs122/1e4), plt.plot(d_PZ122), plt.plot(d_clr122), plt.plot(dw1_exp3[122]), plt.show()
+np.savetxt("../data/3exp_122sgnl.txt", dw1_exp3[122][2000:])
+en122, cs122, d_PZ122, d_clr122, idxcs_max122, bl122 = calc_en_trap(dw1_exp3[122], 72745, 15000, 3000, 30)
+plt.plot(cs122/1e4), plt.plot(d_PZ122), plt.plot(d_clr122), plt.plot(dw1_exp3[122]), plt.show()
+from funcs import calc_en_trap
+from histo_calc import load_data
+import numpy as np
+import matplotlib.pyplot as plt
+dw1_exp172 = load_data("../data/17exp2_wave1.txt", stop=300)
+en = np.zeros(300)
+for i, d in enumerate(dw1_exp172):
+	en[i] = calc_en_trap(d, 27710, 15000, 3000, 30)[0]
+	print(i, en[i])
+hist_exp172 = np.histogram(en_exp172/1e5, bins = np.arange(0, 4095))
+hist_exp172 = np.histogram(en/1e5, bins = np.arange(0, 4095))
+plt.plot(hist_exp172[1][:-1], hist_exp172[0]), plt.show()
+hist_exp172 = np.histogram(en/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp172[1][:-1], hist_exp172[0]), plt.show()
+1354/1190
+1333/1173
+exit()
+(5-2)/2
+(5-2)//2
+(5-3)//2
+(5-4)//2
+(5-1)//2
+import matplotlib.pyplot as plt
+import numpy as np
+from histo_calc import load_data
+from funcs import calc_en_trap, calc_CPpzc_RC1
+dw1_exp181 = load_data("../data/18exp1_wave1.txt", stop=400)
+en181 = np.zeros(400)
+for i, d in enumerate(dw1_exp181):
+	en181[i] = calc_en_trap(d, 27710, 15000, 3000, 30)[0]
+	print(i, en181[i]/1e3)
+hist_exp181 = np.histogram(en181/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181[1][:-1], hist_exp181[0]), plt.show()
+hist_exp181 = np.histogram(en181/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181[1][:-1], hist_exp181[0]), plt.show()
+np.where((en181/1e3 > 1300) & (en181/1e3 < 1400))
+en9, cs9, d_PZ9, d_clr9, idxcs_max9, bl9 = calc_en_trap(dw1_exp181[9], 27710, 15000, 3000, 30)
+en9/1e3
+plt.plot(cs14/1e4), plt.plot(d_PZ14), plt.plot(d_clr14), plt.plot(dw1_exp181[14]), plt.show()
+idxcs_max9
+plt.plot(cs9/1e4), plt.plot(d_PZ9), plt.plot(d_clr9), plt.plot(dw1_exp181[9]), plt.show()
+en14, cs14, d_PZ14, d_clr14, idxcs_max14, bl14 = calc_en_trap(dw1_exp181[14], 27710, 15000, 3000, 30)
+en14/1e3
+plt.plot(cs14/1e3), plt.plot(d_PZ14), plt.plot(d_clr14), plt.plot(dw1_exp181[14]), plt.show()
+idxcs_max14
+plt.plot(cs14/1e3), plt.plot(d_PZ14), plt.plot(d_clr14), plt.plot(dw1_exp181[14]), plt.show()
+plt.plot(hist_exp181[1][:-1], hist_exp181[0]), plt.show()
+dw1_exp181 = load_data("../data/18exp1_wave1.txt", stop=2340)
+plt.plot(hist_exp181[1][:-1], hist_exp181[0]), plt.show()
+np.where((en181/1e3 > 1090) & (en181/1e3 < 1125))
+en2, cs2, d_PZ2, d_clr2, idxcs_max14, bl2 = calc_en_trap(dw1_exp181[2], 27710, 15000, 3000, 30)
+en2/1e3
+plt.plot(cs2/1e3), plt.plot(d_PZ2), plt.plot(d_clr2), plt.plot(dw1_exp181[2]), plt.show()
+idxcs_max2
+idxcs_max14
+plt.plot(cs2/1e3), plt.plot(d_PZ2), plt.plot(d_clr2), plt.plot(dw1_exp181[2]), plt.show()
+en141, cs141, d_PZ141, d_clr141, idxcs_max141, bl141 = calc_en_trap(dw1_exp181[141], 27710, 15000, 3000, 30)
+plt.plot(cs141/1e3), plt.plot(d_PZ141), plt.plot(d_clr141), plt.plot(dw1_exp181[141]), plt.show()
+plt.plot(cs141/1e3), plt.plot(d_PZ141), plt.plot(d_clr141), plt.plot(dw1_exp181[141]), plt.plot(dw1_exp181[9]), plt.show()
+plt.plot(cs141/1e3), plt.plot(d_PZ141), plt.plot(d_clr141), plt.plot(dw1_exp181[141]), plt.plot(dw1_exp181[250]), plt.plot(dw1_exp181[9]), plt.show()
+hist
+en = np.zeros(2340)
+for i, d in enumerate(dw1_exp181):
+	en[i] = calc_en_trap(d, 27710, 15000, 3000, 30)[0]
+	print(i, en[i]/1e3)
+hist_exp181f = np.histogram(en181/1e3, bins = np.arange(0, 4095))
+hist_exp181f = np.histogram(en/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181f[1][:-1], hist_exp181f[0]), plt.show()
+17/1362
+en181_lbg = np.zeros(2340)
+for i, d in enumerate(dw1_exp181):
+	en181_lbg[i] = calc_en_trap(d, 27710, 15000, 3000, 300)[0]
+	print(i, en181_lbg[i])
+hist_exp181_lbg = np.histogram(en181_lbg/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181f[1][:-1], hist_exp181f[0]), plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_lbg[0]), plt.show()
+np.sum(en181_lbg[en181_lbg > 1450])
+np.sum(len(en181_lbg[en181_lbg > 1450]))
+np.sum(len(en181_lbg[(en181_lbg > 1450) & (en181_lbg < 1620)]))
+np.sum(len(np.where((en181_lbg > 1450) & (en181_lbg < 1620))))
+plt.plot(hist_exp181f[1][:-1], hist_exp181f[0]), plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_lbg[0]), plt.show()
+np.sum(len(np.where((en181_lbg > 1450) & (en181_lbg < 1550))[0]))
+len(np.where((en181_lbg > 1450) & (en181_lbg < 1550))[0])
+np.where((en181_lbg > 1450) & (en181_lbg < 1550))
+len(np.where((en181_lbg/1e3 > 1450) & (en181_lbg/1e3 < 1550))[0])
+len(np.where((en181_lbg/1e3 > 1450) & (en181_lbg/1e3 < 1650))[0])
+len(np.where((en181_lbg/1e3 > 1450))[0])
+del sys.modules["funcs"]
+import sys
+from funcs import calc_en_trap, calc_CPpzc_RC1
+en181_RC = np.zeros(2340)
+for i, d in enumerate(dw1_exp181):
+	print(i, en181_RC[i]/1e3)
+hist_exp181_RC_lbg = np.histogram(en181_RC/1e4, bins = np.arange(0, 4095))
+plt.plot(hist_exp181f[1][:-1], hist_exp181f[0]), plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_lbg[0]), plt.plot(hist_exp181_RC_lbg[1][:-1], hist_exp181_RC_lbg[0]), plt.show()
+hist_exp181_RC_lbg = np.histogram(en181_RC/2e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181f[1][:-1], hist_exp181f[0]), plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_lbg[0]), plt.plot(hist_exp181_RC_lbg[1][:-1], hist_exp181_RC_lbg[0]), plt.show()
+hist_exp181_RC_lbg = np.histogram(en181_RC/5e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181f[1][:-1], hist_exp181f[0]), plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_lbg[0]), plt.plot(hist_exp181_RC_lbg[1][:-1], hist_exp181_RC_lbg[0]), plt.show()
+plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_lbg[0]), plt.show()
+16/1120
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1
+for i, d in enumerate(dw1_exp181):
+	en181_lbg[i] = calc_en_trap(d, 27710, 15000, 3000, 300)[0]
+for i, d in enumerate(dw1_exp181):
+	en181_lbg[i] = calc_en_trap(d, 27710, 15000, 3000, 300)[0]
+	print(i, en181_lbg[i]/1e3)
+hist_exp181_lbg = np.histogram(en181_lbg/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_lbg[0]), plt.show()
+en[:20]
+en1, cs1, d_PZ1, d_clr1, idxcs_max1, bl1 = calc_en_trap(dw1_exp181[0], 27710, 15000, 3000, 300)
+en1/1e3, idxcs_max1, bl1
+plt.plot(cs1/1e3), plt.plot(d_PZ1), plt.plot(d_clr1), plt.plot(dw1_exp181[1]), plt.show()
+en7, cs7, d_PZ7, d_clr7, idxcs_max7, bl7 = calc_en_trap(dw1_exp181[7], 27710, 15000, 3000, 300)
+plt.plot(cs7/1e3), plt.plot(d_PZ7), plt.plot(d_clr7), plt.plot(dw1_exp181[7]), plt.show()
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp181[0], 27710, 15000, 3000, 300)
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp181[0], 27710, 8000, 1000, 300)
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+plt.plot(cs0/5e2), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp181[0], 27710, 15000, 1000, 300)
+plt.plot(cs0/5e2), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+idxcs_max0
+plt.plot(cs0/5e2), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp181[0], 27710, 15000, 4000, 300)
+plt.plot(cs0/5e2), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+en181_opt = np.zeros(2340)
+for i, d in enumerate(dw1_exp181):
+	en181_opt[i] = calc_en_trap(d, 27710, 15000, 4000, 300)[0]
+	print(i, en181_opt[i]/1e3)
+hist_exp181_opt = np.histogram(en181_opt/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_lbg[1][:-1], hist_exp181_CR[0]), plt.show()
+20/1814
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.plot(dw1_exp181[0]), plt.show()
+en0, V0, dat_clr0 = calc_en_trap(dw1_exp181[0], 27710, 5000, 300)
+en0, V0, dat_clr0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 5000, 300)
+en0/1e5
+en0/1e4
+en0/1e3
+plt.plot(V0/1e3), plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.show()
+plt.plot(V0), plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.show()
+en0, V0, dat_clr0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 500, 300)
+plt.plot(V0), plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1
+en0, V0, dat_clr0, idx_max0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 500, 300)
+idx_max0
+en0, V0, dat_clr0, idx_max0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 500, 300)
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.show()
+y_MA = np.array([np.sum(dw1_exp181[i-30:i])/30 for i in range(30, LEN)])
+LEN = 32768
+y_MA = np.array([np.sum(dw1_exp181[i-30:i])/30 for i in range(30, LEN)])
+y_diff = np.array([(y_MA[i+50] - y_MA[i-50]) / 100. for i in range(50, LEN-30-50)])
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(y_diff), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(y_diff/1e3), plt.show()
+y_MA = np.array([np.sum(dw1_exp181[0][i-30:i])/30 for i in range(30, LEN)])
+y_diff = np.array([(y_MA[i+50] - y_MA[i-50]) / 100. for i in range(50, LEN-30-50)])
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(y_diff/1e3), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(y_diff*1e3), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(y_diff*1e2), plt.show()
+y_diff = np.array([(y_MA[i+1] - y_MA[i-1]) / 2. for i in range(50, LEN-30-50)])
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(y_diff*1e2), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(50, LEN), y_diff*1e2), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(50, LEN-80), y_diff*1e2), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(800, LEN-80), y_diff*1e2), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(80, LEN-80), y_diff*1e2), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(80, LEN-50), y_diff*1e2), plt.show()
+en0, V0, dat_clr0, idx_max0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 5000, 300)
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(80, LEN-50), y_diff*1e2), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(80, LEN-50), y_diff*1e1), plt.show()
+en0, V0, dat_clr0, idx_max0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 50, 300)
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(80, LEN-50), y_diff*1e1), plt.show()
+en0, V0, dat_clr0, idx_max0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 100, 300)
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.plot(np.arange(80, LEN-50), y_diff*1e1), plt.show()
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.show()
+en0, V0, dat_clr0, idx_max0 = calc_CPpzc_RC1(dw1_exp181[0], 27710, 500, 300)
+plt.plot(dat_clr0), plt.plot(dw1_exp181[0]), plt.plot(V0), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1
+from funcs import calc_CR_RC1
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 5000, 300)
+del sys.modules["funcs"]
+from funcs import calc_CR_RC1
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 5000, 300)
+del sys.modules["funcs"]
+from funcs import calc_CR_RC1
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 5000, 300)
+del sys.modules["funcs"]
+from funcs import calc_CR_RC1
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 5000, 300)
+en0
+plt.plot(y0), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 10000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 15000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 100, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 1000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+en0, y0, dat_clr0, d_PZ0 = calc_CR_RC1(dw1_exp181[0], 27710, 7000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+en181_CR_RC = np.zeros(2340)
+for i, d in enumerate(dw1_exp181):
+	en181_CR_RC[i] = calc_CR_RC1(d, 27710, 5000, 300)
+	en181_CR_RC[i] = calc_CR_RC1(d, 27710, 5000, 300)[0]
+	print(i, en181_CR_RC[i]/1e3)
+len(np.where(en181_CR_RC/1e3 > 4095)[0])
+hist_exp181_opt = np.histogram(en181_opt/1e3, bins = np.arange(0, 4095))
+hist_exp181_CR_RC = np.histogram(en181_CR_RC/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_opt[1][:-1], hist_exp181_opt[0]), plt.plot(hist_exp181_CR_RC[1][:-1], hist_exp181_CR_RC[0]), plt.show()
+hist_exp181_CR_RC = np.histogram(en181_CR_RC/1e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_opt[1][:-1], hist_exp181_opt[0]), plt.plot(hist_exp181_CR_RC[1][:-1], hist_exp181_CR_RC[0]), plt.show()
+hist_exp181_CR_RC = np.histogram(en181_CR_RC/5e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_opt[1][:-1], hist_exp181_opt[0]), plt.plot(hist_exp181_CR_RC[1][:-1], hist_exp181_CR_RC[0]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_CR_RC1
+en181_CR_RC_sum = np.zeros(2340)
+for i, d in enumerate(dw1_exp181):
+	en181_CR_RC_sum[i] = calc_CR_RC1(d, 27710, 5000, 300)[0]
+	print(i, en181_CR_RC_sum[i])
+hist_exp181_CR_RC_sum = np.histogram(en181_CR_RC_sum/1e4, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_opt[1][:-1], hist_exp181_opt[0]), plt.plot(hist_exp181_CR_RC[1][:-1], hist_exp181_CR_RC[0]), plt.plot(hist_exp181_CR_RC_sum[1][:-1], hist_exp181_CR_RC_sum[0]), plt.show()
+len(np.where(en181_CR_RC_sum/1e4 > 4095)[0])
+len(np.where(en181_CR_RC_sum/1e5 > 4095)[0])
+len(np.where(en181_CR_RC_sum/1e6 > 4095)[0])
+hist_exp181_CR_RC_sum = np.histogram(en181_CR_RC_sum/1e6, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_opt[1][:-1], hist_exp181_opt[0]), plt.plot(hist_exp181_CR_RC[1][:-1], hist_exp181_CR_RC[0]), plt.plot(hist_exp181_CR_RC_sum[1][:-1], hist_exp181_CR_RC_sum[0]), plt.show()
+hist_exp181_CR_RC_sum = np.histogram(en181_CR_RC_sum/5e6, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_opt[1][:-1], hist_exp181_opt[0]), plt.plot(hist_exp181_CR_RC[1][:-1], hist_exp181_CR_RC[0]), plt.plot(hist_exp181_CR_RC_sum[1][:-1], hist_exp181_CR_RC_sum[0]), plt.show()
+hist_exp181_CR_RC_sum = np.histogram(en181_CR_RC_sum/2e6, bins = np.arange(0, 4095))
+plt.plot(hist_exp181_opt[1][:-1], hist_exp181_opt[0]), plt.plot(hist_exp181_CR_RC[1][:-1], hist_exp181_CR_RC[0]), plt.plot(hist_exp181_CR_RC_sum[1][:-1], hist_exp181_CR_RC_sum[0]), plt.show()
+from funcs import calc_CR_RC1
+from funcs import calc_en_trap, calc_CPpzc_RC1
+from histo_calc import load_data
+import numpy as np
+import matplotlib.pyplot as plt
+dw1_exp183 = load_data("../data/18exp3_wave1.txt", stop=7645)
+import sys
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1, calc_CR_RC1
+en0, y0, dat_clr0, d_PZ0, idx_max0 = calc_CR_RC1(dw1_exp183[0], 27710, 2500, 300)
+en0/1e3, idx_max0
+en0/1e1, idx_max0
+plt.plot(y0), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.show()
+plt.plot(y0/1e2), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1, calc_CR_RC1
+en0, y0, dat_clr0, d_PZ0, idx_max0 = calc_CR_RC1(dw1_exp183[0], 27710, 2500, 300)
+en0/1e1, idx_max0
+plt.plot(y0/1e2), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1, calc_CR_RC1
+en0, y0, dat_clr0, d_PZ0, idx_max0 = calc_CR_RC1(dw1_exp183[0], 27710, 2500, 300)
+en0, y0, dat_clr0, d_PZ0, idx_max0 = calc_CR_RC1(dw1_exp183[0], 27710, 2500, 200, 200, 300)
+en0/1e1, idx_max0
+en0/1e3, idx_max0
+en1, y1, dat_clr1, d_PZ1, idx_max1 = calc_CR_RC1(dw1_exp183[1], 27710, 2500, 200, 200, 300)
+en1/1e3, idx_max1
+en183_1k = np.zeros(1000)
+for i, d in enumerate(dw1_exp183):
+	en183_1k[i] = calc_CR_RC1(dw1_exp183[i], 27710, 2500, 200, 200, 300)[0]
+	print(i, en183_1k[i])
+en183_1k[900]
+hist_exp183_CRRC_1k = np.histogram(en183_1k/1e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4095), hist_exp183_CRRC_1k[0]), plt.show()
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC_1k[0]), plt.show()
+en183_1k[:5]
+en183_1k[:5]/1e3
+hist_exp183_CRRC_1k = np.histogram(en183_1k/3e2, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC_1k[0]), plt.show()
+en0, y0, dat_clr0, d_PZ0, idx_max0 = calc_CR_RC1(dw1_exp183[0], 27710, 6000, 1000, 1000, 300)
+en0/1e3
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap, calc_CPpzc_RC1, calc_CR_RC1, calc_CR_RC2
+en0, y0, dat_clr0, d_PZ0, idx_max0 = calc_CR_RC1(dw1_exp183[0], 27710, 6000, 1000, 1000, 300)
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 6000, 1000, 1000, 300)
+en02/1e3
+en02/1e6
+en02/1e7
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y0/1e6), plt.show()
+idx_max02
+idx_max0
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y0/1e3), plt.show()
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/1e3), plt.show()
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/1e7), plt.show()
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 2000, 1000, 1000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/1e7), plt.show()
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/1e5), plt.show()
+for i, d in enumerate(dw1_exp183[:1000]):
+	en183_1k[i] = calc_CR_RC2(dw1_exp183[i], 27710, 2000, 10, 10, 300)[0]
+	print(i, en183_1k[i]/1e5)
+hist_exp183_CRRC2_1k = np.histogram(en183_1k/4e5, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2_1k[0]), plt.show()
+for i, d in enumerate(dw1_exp183[:1000]):
+	en183_1k[i] = calc_CR_RC2(dw1_exp183[i], 27710, 6000, 2000, 2000, 300)[0]
+	print(i, en183_1k[i]/4e5)
+hist_exp183_CRRC2_1k = np.histogram(en183_1k/1e6, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2_1k[0]), plt.show()
+hist_exp183_CRRC2_1k = np.histogram(en183_1k/5e6, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2_1k[0]), plt.show()
+562/608
+1333/1173
+1173/1333
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2_1k[0]), plt.show()
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 6000, 1000, 1000, 300)
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 6000, 2000, 2000, 300)
+en02/5e6
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/5e6), plt.show()
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 10000, 2000, 2000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/5e6), plt.show()
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 15000, 2000, 2000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/5e6), plt.show()
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 10000, 2000, 2000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/5e6), plt.show()
+en02, y02, dat_clr02, d_PZ02, idx_max02 = calc_CR_RC2(dw1_exp183[0], 27710, 8000, 2000, 2000, 300)
+plt.plot(y0/1e3), plt.plot(dat_clr0), plt.plot(d_PZ0), plt.plot(dw1_exp183[0]), plt.plot(y02/5e6), plt.show()
+for i, d in enumerate(dw1_exp183[:1000]):
+	en183_1k[i] = calc_CR_RC2(dw1_exp183[i], 27710, 8000, 4000, 2000, 300)[0]
+	print(i, en183_1k[i]/1e6)
+hist_exp183_CRRC2_1k = np.histogram(en183/1e8, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2_1k[0]), plt.show()
+45.8/50.8
+1173/1333
+hist_exp183_CRRC2_1k = np.histogram(en183_1k/1e7, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2_1k[0]), plt.show()
+458/520
+for i, d in enumerate(dw1_exp183):
+	en183_1k[i] = calc_CR_RC2(dw1_exp183[i], 27710, 8000, 4000, 2000, 300)[0]
+	print(i, en183_1k[i]/5e6)
+en183 = np.zeros(7645)
+	en183[i] = calc_CR_RC2(d, 27710, 8000, 4000, 2000, 300)[0]
+	print(i, en183[i]/5e6)
+hist_exp183_CRRC2 = np.histogram(en183/5e6, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2[0]), plt.show()
+hist_exp183_CRRC2 = np.histogram(en183/1e7, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp183_CRRC2[0]), plt.show()
+20/460
+plt.plot(dw1_exp183[0]), plt.show()
+1637 - 1250
+exit()
+from funcs import calc_en_trap, calc_CPpzc_RC1, calc_CR_RC1, calc_CR_RC2
+import sys
+import matplotlib.pyplot as plt
+import numpy as np
+from histo_calc import load_data
+dw1_exp191 = load_data("../data/19exp1_wave1.txt", stop=3500)
+en191 = np.zeros(3500)
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp191[0], 27710, 15000, 4000, 300)
+en0/1e3, idxcs_max0, bl0
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+en12, cs12, d_PZ12, d_clr12, idxcs_max12, bl12 = calc_en_trap(dw1_exp191[12], 27710, 15000, 4000, 300)
+en12/1e3, idxcs_max12
+en705, cs705, d_PZ705, d_clr705, idxcs_max705, bl705 = calc_en_trap(dw1_exp191[705], 27710, 15000, 4000, 300)
+en705/1e3, idxcs_max705
+plt.plot(cs705/1e3), plt.plot(d_PZ705), plt.plot(d_clr705), plt.show()
+plt.plot(cs705/1e3), plt.plot(d_PZ705), plt.plot(d_clr705), plt.plot(dw1_exp191[705]), plt.show()
+	en191[i] = calc_en_trap(d, 27710, 15000, 4000, 300)[0]
+	print(i, en191[i]/1e3)
+hist_exp191 = np.histogram(en191/1e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp191[0]), plt.show()
+plt.plot(np.arange(0, 4094)*0.95, hist_exp191[0]), plt.show()
+exit()
+from histo_calc import load_data
+import numpy as np
+import matplotlib.pyplot as plt
+from funcs import calc_en_trap, calc_CPpzc_RC1, calc_CR_RC1, calc_CR_RC2
+dw1_exp18 = load_data("../data/18exp1_.txt", stop=300)
+dw1_exp18 = load_data("../data/18exp1_wave1.txt", stop=300)
+en18 = np.zeros(300)
+for i, d in enumerate(dw1_exp18):
+	en18[i] = calc_en_trap(d, 27710, 15000, 4000, 300)[0]
+	print(i, en18[i])
+hist_exp18 = np.histogram(en18/5e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp18[0]), plt.show()
+np.where((en18/5e3 > 315) & (en18/5e3 < 320))
+plt.plot(dw1_exp18[1], dw1_exp18[3])
+plt.show()
+plt.plot(dw1_exp18[1]), plt.plot(dw1_exp18[3]), plt.show()
+sig1 = np.array([np.sum(dw1_exp18[1][i-30:i])/30 for i in range(30, LEN)])
+LEN = 32768
+sig1 = np.array([np.sum(dw1_exp18[1][i-30:i])/30 for i in range(30, LEN)])
+plt.plot(dw1_exp18[1]), plt.plot(dw1_exp18[3]), plt.plot(sig1), plt.show()
+plt.plot(dw1_exp18[1]), plt.plot(sig1), plt.show()
+sig2 = np.array([np.sum(dw1_exp18[1][i-100:i])/100 for i in range(100, LEN)])
+plt.plot(dw1_exp18[1]), plt.plot(sig1), plt.plot(sig2), plt.show()
+exit()
+from funcs import calc_en_trap, calc_CPpzc_RC1, calc_CR_RC1, calc_CR_RC2
+from histo_calc import load_data
+import numpy as np
+import matplotlib.pyplot as plt
+dw1_exp201 = load_data("../data/20exp1_wave1.txt", stop=500)
+dw1_exp201 = load_data("../data/20exp_wave1.txt", stop=500)
+from funcs_worked_with_gen import calc_en_trap
+en201 = np.zeros(500)
+for i, d in enumerate(dw1_exp201):
+	en201[i] = calc_en_trap(d, 8144, 15000, 3000, 30)[0]
+	print(i, en201[i]/5e3)
+hist_exp201 = np.histogram(en201/5e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp201[0]), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp191[498], 8144, 15000, 3000, 30)
+en498/5e3
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.show()
+dw1_exp18 = load_data("../data/18exp1_wave1.txt", stop=100)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(dw1_exp18[1]), plt.show()
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 27710, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 25000, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 20000, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 12000, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 17000, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 18000, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 16000, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp201[498], 16500, 15000, 3000, 30)
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+for i, d in enumerate(dw1_exp201):
+	en201[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	print(i, en201[i]/5e3)
+hist_exp201 = np.histogram(en201/5e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp201[0]), plt.show()
+plt.plot(dw1_exp201[498]), plt.plot(cs498/5e3), plt.plot(d_PZ498), plt.show()
+exit()
+from funcs_worked_with_gen import calc_en_trap
+import matplotlib.pyplot as plt
+import numpy as np
+from histo_calc import load_data
+dw1_exp202 = load_data("../data/20exp2_wave1.txt", stop=500)
+en202 = np.zeros(500)
+for i, d in enumerate(dw1_exp202):
+	en202[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	print(i, en202[i]/5e3)
+hist_exp202 = np.histogram(en202/5e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp202[0]), plt.show()
+plt.plot(dw1_exp202[499]), plt.show()
+exit()
+from histo_calc import load_data
+import numpy as np
+import matplotlib.pyplot as plt
+from funcs_worked_with_gen import calc_en_trap
+dw1_exp203 = load_data("../data/20exp3_wave1.txt", stop=500)
+en203 = np.zeros(500)
+for i, d in enumerate(dw1_exp203):
+	en203[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	print(i, en203[i]/5e3)
+hist_exp203 = np.histogram(en203/5e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp203[0]), plt.show()
+plt.plot(dw1_exp203[499]), plt.show()
+64 * 0.5**0.5
+64 * 2**0.5
+2**0.5
+64 * 2**0.5
+exit()
+from funcs_worked_with_gen import calc_en_trap
+import matplotlib.pyplot as plt
+import numpy as np
+from histo_calc import load_data
+dw1_exp204 = load_data("../data/20exp4_wave1.txt", stop=500)
+for i, d in enumerate(dw1_exp204):
+	en204[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	pirnt(i, en204[i]/5e3)
+for i, d in enumerate(dw1_exp204):
+	en204[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	print(i, en204[i]/5e3)
+en204 = np.zeros(500)
+for i, d in enumerate(dw1_exp204):
+	en204[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	print(i, en204[i]/5e3)
+hist_exp204 = np.histogram(en204/5e3, bins = np.arange(0, 4095))
+plt.plot(np.arange(0, 4094), hist_exp204[0]), plt.show()
+plt.plot(dw1_exp204[499]), plt.show()
+exit()
+from histo_calc import load_data
+import numpy as np
+import matplotlib.pyplot as plt
+from funcs_worked_with_gen import calc_en_trap
+dw1_exp205 = load_data("../data/20exp5_wave1.txt", stop=500)
+en205 = np.zeros(500)
+for i, d in enumerate(dw1_exp205):
+	en205[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	print(i, en205[i]/5e3)
+plt.plot(np.arange(0, 4094), hist_exp205[0]), plt.show()
+plt.plot(dw1_exp205[499]), plt.plot()
+plt.plot(dw1_exp205[499]), plt.show()
+exit()
+from histo_calc import load_data
+from funcs import apply_MAF, apply_DIFF
+dw1_exp209 = load_data("../data/20exp9_wave1.txt", stop=500)
+import matplotlib.pyplot as plt
+import numpy as np
+plt.plot(dw1_exp209[499], label="Raw signal"), plt.plot(apply_MAF(dw1_exp209[499], 50), label="Moving average 100 ns"), plt.plot(apply_MAF(dw1_exp209[499], 100), label="Moving average 200 ns"), plt.plot(apply_MAF(dw1_exp209[499], 1000), label="Moving average 2000 ns"), plt.legend(), plt.show()
+plt.plot(dw1_exp209[499], label="Raw signal"), plt.plot(apply_MAF(dw1_exp209[499], 50), label="Moving average 100 ns"), plt.plot(apply_MAF(dw1_exp209[499], 100), label="Moving average 200 ns"), plt.plot(apply_MAF(dw1_exp209[499], 1000), label="Moving average 2000 ns"), plt.legend(), plt.title("~14 keV signal from generator through preamplifier"), plt.show()
+plt.plot(dw1_exp209[499], label="Raw signal"), plt.plot(apply_MAF(dw1_exp209[499], 50), label="Moving average 100 ns"), plt.plot(apply_MAF(dw1_exp209[499], 100), label="Moving average 200 ns"), plt.plot(apply_MAF(dw1_exp209[499], 1000), label="Moving average 2000 ns"), plt.legend(), plt.title("~14 keV signal from generator through preamplifier | Rise edge"), plt.show()
+from funcs_worked_with_gen import calc_en_trap
+en209_500MHz = np.zeros(500)
+en209_125MHz = np.zeros(500)
+for i, d in enumerate(dw1_exp209):
+	en209_500MHz[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+import 	sys
+del sys.modules["funcs"]
+del sys.modules["funcs_worked_with_gen"]
+from funcs_worked_with_gen import calc_en_trap
+15000/4
+3000/4
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp209[498], 3750, 750, 30, 8192)
+en498/5e2
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp209[499], 3750, 750, 30, 8192)
+en498/5e2
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp209[499][::2], 3750, 750, 30, 8192)
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp209[499][::2], 4125, 3750, 750, 30, le=8192)
+en498/5e2
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp209[498][::2], 4125, 3750, 750, 30, le=8192)
+en498/5e2
+en498, cs498, d_PZ498, d_clr498, idxcs_max498, bl498 = calc_en_trap(dw1_exp209[499][::2], 4125, 3750, 750, 30, le=8192)
+en498/5e2
+plt.plot(dw1_exp209[499]), plt.plot(dw1_exp209[499][::2])
+plt.plot(dw1_exp209[499]), plt.plot(dw1_exp209[499][::2]), plt.show()
+plt.plot(dw1_exp209[499]), plt.plot(dw1_exp209[499][::2]), plt.plot(cs498), plt.show()
+plt.plot(dw1_exp209[499]), plt.plot(dw1_exp209[499][::2]), plt.plot(d_PZ498), plt.show()
+plt.plot(dw1_exp209[499]), plt.plot(dw1_exp209[499][::2]), plt.plot(d_clr498), plt.show()
+dw1_exp201 = load_data("../data/20exp1_wave1.txt", stop=10)
+dw1_exp201 = load_data("../data/20exp_wave1.txt", stop=10)
+en3, cs3, d_PZ3, d_clr3, idxcs_max3, bl3 = calc_en_trap(dw1_exp201[3][::2], 4125, 3750, 750, 30, le=8192)
+en3
+plt.plot(dw1_exp201[3]), plt.show()
+en3, cs3, d_PZ3, d_clr3, idxcs_max3, bl3 = calc_en_trap(dw1_exp201[2][::2], 4125, 3750, 750, 30, le=8192)
+plt.plot(dw1_exp201[2]), plt.show()
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp201[2][::2], 4125, 3750, 750, 30, le=8192)
+en2
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::2]), plt.show()
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::2]), plt.plot(cs2), plt.show()
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::2]), plt.plot(d_clr2), plt.show()
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp201[2][::2], 4125, 3750, 750, 3000, le=8192)
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::2]), plt.plot(d_clr2), plt.show()
+41/8
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::2]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.show()
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp201[2][::4], 4125, 3750, 750, 3000, le=8192)
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::2]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.show()
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::4]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.show()
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::4]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.plot(cs2), plt.show()
+idxcs_max2
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::4]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.plot(cs2), plt.show()
+del sys.modules["funcs_worked_with_gen"]
+from funcs_worked_with_gen import calc_en_trap
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::4]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.plot(cs2), plt.show()
+idxcs_max2
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp201[2][::4], 4125, 3750, 750, 3000, le=8192)
+idxcs_max2
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::4]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.plot(cs2), plt.show()
+del sys.modules["funcs_worked_with_gen"]
+from funcs_worked_with_gen import calc_en_trap
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp201[2][::4], 4125, 3750, 750, 3000, le=8192)
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::4]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.plot(cs2), plt.show()
+idxcs_max2
+plt.plot(dw1_exp201[2]), plt.plot(dw1_exp201[2][::4]), plt.plot(d_clr2), plt.plot(d_PZ2), plt.plot(cs2), plt.show()
+en201_500MHz = np.zeros(500)
+en201_125MHz = np.zeros(500)
+for i, d in enumerate(dw1_exp201):
+	en201_500MHz[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	en201_125MHz[i] = calc_en_trap(d[::4], 4125, 3750, 750, 1000, le=8192)[0]
+	print(i, en201_500MHz[i], en201_125MHz[i])
+dw1_exp201 = load_data("../data/20exp_wave1.txt", stop=500)
+467215/1867190
+for i, d in enumerate(dw1_exp201):
+	en201_500MHz[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	en201_125MHz[i] = calc_en_trap(d[::4], 4125, 3750, 750, 1000, le=8192)[0]
+	print(i, en201_500MHz[i]/5e2, en201_125MHz[i]/1e2)
+hist_exp201_500MHz = np.histogram(en201_500MHz/5e2, bins = np.arange(0, 4095))
+hist_exp201_125MHz = np.histogram(en201_125MHz/1e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz), plt.plot(hist_exp201_125MHz), plt.show()
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/8e1, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/10, bins = np.arange(0, 4095))
+hist_exp201_125MHz = np.histogram(en201_125MHz/1e1, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/2e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/1.5e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/1.4e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/1.3e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/1.2e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+hist_exp201_125MHz = np.histogram(en201_125MHz/1.25e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+for i, d in enumerate(dw1_exp209):
+	en209_500MHz[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+for i, d in enumerate(dw1_exp209):
+	en209_500MHz[i] = calc_en_trap(d, 16500, 15000, 3000, 30)[0]
+	en209_125MHz[i] = calc_en_trap(d[::4], 4125, 3750, 750, 1000, le=8192)[0]
+	print(i, en209_500MHz[i], en209_125MHz[i])
+plt.plot(hist_exp209_500MHz[0]), plt.plot(hist_exp209_125MHz[0]), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.legend(), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.legend(), plt.title("Generator signal Att 1024$\sqrt{2}$ ~14 keV"), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV"), plt.show()
+en209_250MHz = np.zeros(500)
+for i, d in enumerate(dw1_exp209):
+	en209_250MHz[i] = calc_en_trap(d[::2], 8250, 7500, 1500, 1000, le=16384)[0]
+	print(i, en209_250MHz[i])
+hist_exp209_125MHz = np.histogram(en209_250MHz/2.5e2, bins = np.arange(0, 4095))
+hist_exp209_125MHz = np.histogram(en209_125MHz/1.25e2, bins = np.arange(0, 4095))
+hist_exp209_250MHz = np.histogram(en209_250MHz/2.5e2, bins = np.arange(0, 4095))
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.plot(hist_exp209_250MHz[0], label="250 MHz 14 bit"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV"), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_250MHz[0], label="250 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV"), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV"), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV", c="green"), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV", color="green"), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit", color="green"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV"), plt.show()
+plt.plot(hist_exp201_500MHz[0]), plt.plot(hist_exp201_125MHz[0]), plt.show()
+plt.plot(hist_exp201_500MHz[0], label="500 MHz 14 bit", color="blue"), plt.plot(hist_exp201_125MHz[0], label="125 MHz 14 bit", color="green"), plt.title("Generator signal Att=8$\sqrt{2}$ ~1800 keV"), plt.legend(), plt.show()
+plt.plot(hist_exp209_500MHz[0], label="500 MHz 14 bit"), plt.plot(hist_exp209_125MHz[0], label="125 MHz 14 bit", color="green"), plt.legend(), plt.title("Generator signal Att=1024$\sqrt{2}$ ~14 keV"), plt.show()
+256 * 8
+256 * 8 * 4
+exit()
+from funcs_worked_with_gen import calc_en_trap
+import 	sys
+from funcs_worked_with_gen import calc_en_trap
+import 	sys
+from funcs_worked_with_gen import calc_en_trap
+import numpy as np
+import matplotlib.pyplot as plt
+from funcs import calc_en_trap
+from histo_calc import load_data
+dw1_exp21 = load_data("../data/21exp_wave4.txt", stop=100)
+plt.plot(dw1_exp21[0]), plt.show()
+plt.plot(dw1_exp21[1]), plt.show()
+en21 = np.zeros(100)
+	en18[i] = calc_en_trap(d, 27710, 15000, 4000, 300)[0]
+for i, d in enumerate(dw1_exp21):
+	en21[i] = calc_en_trap(d, 27710, 15000, 4000, 300)[0]
+	print(i, en21[i]/1e4)
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp21[0], 27710, 15000, 4000, 300)
+en0/1e4
+plt.plot(cs0, d_PZ0, d_clr0), plt.show()
+plt.plot(cs0/1e4), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+np.savetxt("../data/21exp_0sgnl.txt", dw1_exp21[0])
+plt.plot(dw1_exp21[0])
+plt.plot(dw1_exp21[0]), plt.show()
+plt.plot(dw1_exp21[1]), plt.show()
+np.savetxt("../data/21exp_0sgnl.txt", dw1_exp21[1][16500:])
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp21[0], 21827, 15000, 4000, 300)
+plt.plot(cs0/1e4), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+idxcs_max0
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+np.savetxt("../data/21exp_0sgnl.txt", dw1_exp21[2][16500:])
+np.savetxt("../data/21exp_2sgnl.txt", dw1_exp21[2][16500:])
+np.savetxt("../data/21exp_2sgnl.txt", dw1_exp21[2][19500:])
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp21[0], 23681 15000, 4000, 300)
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp21[0], 23681, 15000, 4000, 300)
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp21[2], 23681, 15000, 4000, 300)
+plt.plot(cs0/1e3), plt.plot(d_PZ0), plt.plot(d_clr0), plt.show()
+plt.plot(cs2/1e3), plt.plot(d_PZ2), plt.plot(d_clr2), plt.show()
+idxcs_max2
+plt.plot(cs2/1e3), plt.plot(d_PZ2), plt.plot(d_clr2), plt.show()
+for i, d in enumerate(dw1_exp21):
+	en21[i] = calc_en_trap(d, 23000, 15000, 4000, 300)[0]
+	print(i, en21[i]/1e3)
+hist_exp21= np.histogram(en21/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp21[0]), plt.show()
+dw1_exp21 = load_data("../data/21exp_wave4.txt", stop=3250)
+en21 = np.zeros(3250)
+for i, d in enumerate(dw1_exp21):
+	en21[i] = calc_en_trap(d, 23000, 15000, 4000, 300)[0]
+	print(i, en21[i])
+hist_exp21= np.histogram(en21/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp21[0]), plt.show()
+10/1385
+10*1333/1385
+10*1332/1385
+plt.plot(hist_exp21[0]), plt.show()
+10*1173/1385
+plt.plot(hist_exp21[0]), plt.show()
+plt.plot(hist_exp21[0]), plt.label("Canberra det - 1500 V | 60Co ~9keV@1173keV"), plt.show()
+plt.plot(hist_exp21[0]), plt.title("Canberra det - 1500 V | 60Co ~9keV@1173keV"), plt.show()
+from scipy.signal import gaussian
+def G(x, x0, A, mu, std):
+	return A * np.exp(-0.5*(x-x0-mu)**2/std**2)
+from scipy.optimize import curve_fit
+plt.plot(hist_exp21[0]), plt.show()
+popt, pcov = curve_fit(G, np.arange(1373, 1400), hist_exp21[0][1373:1400], p0=(1385, 80, 1, 3))
+popt
+def G(x, A, mu, std):
+def G(x, a, A, mu, std):
+	return a + A * np.exp(-0.5*(x-mu)**2/std**2)
+popt, pcov = curve_fit(G, np.arange(1373, 1400), hist_exp21[0][1373:1400], p0=(10, 80, 1385, 3))
+popt
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1550, 1600), G(np.arange(1360, 1420), *popt)), plt.show()
+2.35*4.24
+popt1173 = popt
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt)), plt.show()
+popt1332, pcov = curve_fit(G, np.arange(1550, 1600), hist_exp21[0][1550:1600], p0=(10, 80, 1570, 3))
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt)), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1500), *popt)), plt.show()
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt)), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt)), plt.show()
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332)), plt.show()
+popt1332
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332)), plt.show()
+popt1332, pcov = curve_fit(G, np.arange(1565, 1592), hist_exp21[0][1565:1592], p0=(10, 80, 1570, 3))
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332)), plt.show()
+popt1332, pcov = curve_fit(G, np.arange(1565, 1592), hist_exp21[0][1565:1592], p0=(1, 80, 1580, 3))
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332)), plt.show()
+popt1173
+popt1332
+2.35 * 4.24/1387.8
+2.35 * 3.96/1576.8
+0.72*1173
+0.0072*1173
+0.0059*1333
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332)), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.show()
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), ps=5), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332)), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.show()
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), "x"), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332)), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.show()
+plt.plot(hist_exp21[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), "x"), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.show()
+plt.plot(hist_exp21[0], "x", ms=5), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), lw=2), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.show()
+plt.plot(hist_exp21[0], "x", ms=8, c="red"), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), lw=2), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.show()
+plt.plot(hist_exp21[0], "x", ms=8, c="red"), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), lw=2), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.xtitle("channels"),plt.show()
+plt.plot(hist_exp21[0], "x", ms=8, c="red"), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), lw=2), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.xlabel("channels"),plt.show()
+plt.plot(hist_exp21[0], "x", ms=8, c="red"), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), lw=2), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.xlabel("channels"), plt.ylabel("Intensity (counts)"), plt.show()
+1173/1387.8
+plt.plot(hist_exp21[0], "x", ms=8, c="red"), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), lw=2), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.xlabel("channels"), plt.ylabel("Intensity (counts)"), plt.show()
+1173/1387.8 * 1732
+plt.plot(hist_exp21[0], "x", ms=8, c="red"), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173), lw=2), plt.plot(np.arange(1550, 1600), G(np.arange(1550, 1600), *popt1332), lw=2), plt.title("Canberra Ge detector HV = 1500 V | 60Co Trap shaping 15us - 4us 8.4@1173keV, 7.9@1333keV"), plt.xlabel("channels"), plt.ylabel("Intensity (counts)"), plt.show()
+exit()
+from scipy.optimize import curve_fit
+from histo_calc import load_data
+from funcs import calc_en_trap
+import matplotlib.pyplot as plt
+import numpy as np
+dw4_exp22 = load_data("../data/22exp_wave4.txt", stop=2388)
+en22 = np.zeros(2388)
+	en2[i] = calc_en_trap(d, 23000, 15000, 4000, 300)[0]
+for i, d in enumerate(dw4_exp22):
+	en22[i] = calc_en_trap(d, 23000, 15000, 4000, 300)[0]
+	print(i, en22[i]/1e3)
+hist_exp22= np.histogram(en22/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp22[0]), plt.show()
+from scipy.optimize import curve_fit
+def G(x, a, A, mu, std):
+	return a + A * np.exp(-0.5*(x-mu)**2/std**2)
+popt1173, pcov = curve_fit(G, np.arange(1565, 1592), hist_exp21[0][1565:1592], p0=(1, 80, 1580, 3))
+popt1173, pcov = curve_fit(G, np.arange(1565, 1592), hist_exp22[0][1565:1592], p0=(1, 80, 1580, 3))
+plt.plot(hist_exp22[0]), plt.show()
+popt1173, pcov = curve_fit(G, np.arange(1375, 1400), hist_exp22[0][1375:1400], p0=(1, 80, 1580, 3))
+popt1173, pcov = curve_fit(G, np.arange(1375, 1400), hist_exp22[0][1375:1400], p0=(1, 60, 1380, 3))
+popt1173
+plt.plot(hist_exp22[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 142), *popt)), plt.show()
+plt.plot(hist_exp22[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 142), *popt1173)), plt.show()
+plt.plot(hist_exp22[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.show()
+plt.plot(hist_exp22[0]), plt.show()
+popt1173, pcov = curve_fit(G, np.arange(1375, 1400), hist_exp22[0][1375:1400], p0=(0, 60, 1390, 3))
+popt1173
+plt.plot(hist_exp22[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.show()
+3.65*2.35
+3.65*2.35 * 1173/1391
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw1_exp22[0], 230, 15000, 4000, 300)
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw4_exp22[0], 230, 15000, 4000, 300)
+en2/1e3
+en2, cs2, d_PZ2, d_clr2, idxcs_max2, bl2 = calc_en_trap(dw4_exp22[0], 23000, 15000, 4000, 300)
+en2/1e3
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw4_exp22[0], 23000, 15000, 4000, 300)
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+idxcs_max0
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][17500:33000])
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw4_exp22[0], 22034, 15000, 4000, 300)
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][18000:30000])
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw4_exp22[0], 22720, 15000, 4000, 300)
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+idxcs_max
+idxcs_max0
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][17000:32000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][17070:32000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][17100:32000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][17500:32000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][17500:31000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][18500:30000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][20000:30000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[0][17200:30000])
+np.savetxt("../data/22exp_0sgnl.txt", dw4_exp22[2][17200:30000])
+np.savetxt("../data/22exp_0sgnl.txt", d_clr0[17200:30000])
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw4_exp22[0], 23303, 15000, 4000, 300)
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+del sys.modules["funcs"]
+import sys
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw4_exp22[0], 23303, 15000, 4000, 300)
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+en0/1e3
+idxcs_max0
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+en22n = np.zeros(2388)
+for i, d in enumerate(dw4_exp22):
+	en22n[i] = calc_en_trap(d, 23303, 15000, 4000, 300)[0]
+	print(i, en22n[i]/1e3, en22[i]/1e3)
+hist_exp22n= np.histogram(en22n/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp22[0]), plt.plot(hist_exp22n[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.show()
+popt1173, pcov = curve_fit(G, np.arange(1370, 1395), hist_exp22n[0][1370:1395], p0=(0, 60, 1380, 3))
+popt1173
+plt.plot(hist_exp22[0]), plt.plot(hist_exp22n[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.show()
+2.35 * 3.36 * 1137/1385
+idxcs_max0
+plt.plot(dw4_exp22[0]), plt.plot(d_clr0), plt.plot(d_PZ0), plt.plot(cs0/1e3), plt.show()
+del sys.modules["funcs"]
+from funcs import calc_en_trap
+en22nn = np.zeros(2388)
+for i, d in enumerate(dw4_exp22):
+	en22nn[i] = calc_en_trap(d, 23303, 15000, 4000, 300)[0]
+	print(i, en22nn[i]/1e3)
+hist_exp22nn = np.histogram(en22nn/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp22n[0]), plt.plot(hist_exp22nn[0]), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.show()
+plt.plot(hist_exp22n[0], c="blue"), plt.plot(hist_exp22nn[0], c="red"), plt.plot(np.arange(1360, 1420), G(np.arange(1360, 1420), *popt1173)), plt.show()
+exit()
+from funcs import calc_en_trap
+import sys
+import numpy as np
+import matplotlib.pyplot as plt
+from histo_calc import load_data
+dw4_exp23 = load_data("../data/23exp_wave1.txt", stop=3516)
+en23 = np.zeros(3516)
+for i, d in enumerate(dw1_exp23):
+	en23[i] = calc_en_trap(d, 23303, 15000, 4000, 300)[0]
+	print(i, en23[i]/1e3)
+dw1_exp23 = dw4_exp23
+for i, d in enumerate(dw1_exp23):
+	en23[i] = calc_en_trap(d, 23303, 15000, 4000, 300)[0]
+	print(i, en23[i]/1e3)
+hist_exp23 = np.histogram(en23/1e3, bins = np.arange(0, 4095))
+plt.plot(hist_exp23[0]), plt.show()
+from scipy.optimize import curve_fit
+def G(x, a, A, mu, std):
+	return a + A * np.exp(-0.5*(x-mu)**2/std**2)
+plt.plot(hist_exp23[0]), plt.show()
+popt1333, pcov = curve_fit(G, np.arange(1560, 1600), hist_exp23[0][1560:1600], p0=(0, 210, 1580, 3))
+popt1333
+plt.plot(hist_exp23[0]), plt.plot(np.arage(1560, 1600), G(np.arange(1560, 1600), *popt)), plt.show()
+plt.plot(hist_exp23[0]), plt.plot(np.arange(1560, 1600), G(np.arange(1560, 1600), *popt)), plt.show()
+plt.plot(hist_exp23[0]), plt.plot(np.arange(1560, 1600), G(np.arange(1560, 1600), *popt1333)), plt.show()
+2.35 * 3.36 * 1333 / 1578.3
+plt.plot(hist_exp23[0]), plt.plot(np.arange(1560, 1600), G(np.arange(1560, 1600), *popt1333)), plt.show()
+8 * 1333 / 1578.3
+exit()
+from scipy.optimize import curve_fit
+from histo_calc import load_data
+import matplotlib.pyplot as plt
+import numpy as np
+from funcs import calc_en_trap
+dw1_exp24_0 = load_data("../data/24exp0_wave1.txt", stop=100)
+dw1_exp24_0 = load_data("../data/24exp0_wave1.txt", stop=20)
+en24_0 = np.zeros(20)
+for i, d in enumerate(dw1_exp24_0):
+	en24_0[i] = calc_en_trap(d, 23303, 15000, 4000, 300)[0]
+	print(i, en24_0[i])
+en0, cs0, d_PZ0, d_clr0, idxcs_max0, bl0 = calc_en_trap(dw1_exp24_0[0], 23303, 15000, 4000, 300)
+plt.plot(dw1_exp24_0[0]), plt.plot(d_PZ0), plt.plot(cs0/1e4), plt.show()
+15000 / (1024*2**0.5)
+exit()
+from funcs import calc_en_trap
+import numpy as np
+import matplotlib.pyplot as plt
+from histo_calc import load_data
+dw1_exp24_1 = load_data("../data/24exp1_wave1.txt", stop=20)
+en24 = np.zeros(20)
+for i, d in enumerate(dw1_exp24_1):
+	en24[i] = calc_en_trap(d, 23303, 15000, 4000, 300)[0]
+	print(i, en24[i])
+from histo_calc import load_data
+dw1_exp24_1 = load_data("../data/24exp1_wave1.txt", stop=20)
+dw1_exp24_2 = load_data("../data/24exp2_wave1.txt", stop=20)
+dw1_exp24_4 = load_data("../data/24exp4_wave1.txt", stop=20)
+dw1_exp24_6 = load_data("../data/24exp6_wave1.txt", stop=20)
+dw4_exp24_6 = load_data("../data/24exp6_wave4.txt", stop=20)
+dw4_exp24_4 = load_data("../data/24exp4_wave4.txt", stop=20)
+plt.plot(dw4_exp24_4[0]), plt.plot(dw1_exp24_4[0]), plt.show()
+import matplotlib.pyplot as plt
+plt.plot(dw4_exp24_4[0]), plt.plot(dw1_exp24_4[0]), plt.show()
+plt.plot(dw4_exp24_2[0]), plt.plot(dw1_exp24_2[0]), plt.show()
+dw4_exp24_2 = load_data("../data/24exp2_wave4.txt", stop=20)
+plt.plot(dw4_exp24_2[0]), plt.plot(dw1_exp24_2[0]), plt.show()
+dw4_exp24_3 = load_data("../data/24exp3_wave4.txt", stop=20)
+dw1_exp24_3 = load_data("../data/24exp3_wave1.txt", stop=20)
+plt.plot(dw4_exp24_3[0]), plt.plot(dw1_exp24_3[0]), plt.show()
+plt.plot(dw4_exp24_4[0]), plt.plot(dw1_exp24_4[0]), plt.show()
+dw1_exp24_5 = load_data("../data/24exp5_wave1.txt", stop=20)
+dw4_exp24_5 = load_data("../data/24exp5_wave4.txt", stop=20)
+plt.plot(dw4_exp24_5[0]), plt.plot(dw1_exp24_5[0]), plt.show()
+plt.plot(dw4_exp24_5[0]), plt.plot(dw1_exp24_5[0]), plt.plot(dw1_exp24_4[0]), plt.show()
+plt.plot(dw4_exp24_5[0]), plt.plot(dw1_exp24_5[0]), plt.plot(dw1_exp24_4[0], c="black), plt.show()
+plt.plot(dw4_exp24_5[0]), plt.plot(dw1_exp24_5[0]), plt.plot(dw1_exp24_4[0], c="black"), plt.show()
+plt.plot(dw4_exp24_6[0]), plt.plot(dw1_exp24_6[0]), plt.show()
+dw4_exp24_7 = load_data("../data/24exp7_wave4.txt", stop=20)
+dw1_exp24_7 = load_data("../data/24exp7_wave1.txt", stop=20)
+plt.plot(dw4_exp24_7[0]), plt.plot(dw1_exp24_7[0]), plt.show()
+10 000 / (1024*2**0.5)
+10000 / (1024*2**0.5)
+d0_diff = [dw4_exp24_7[0][i] - dw4_exp24_7[0][i-1] for i in range(1, 32767)]
+plt.plot(dw4_exp24_7[0]), plt.plot(dw1_exp24_7[0]), plt.plot(d0_diff), plt.show()
+d0_diff = [dw4_exp24_7[0][i+100] - dw4_exp24_7[0][i-100] for i in range(100, 32667)]
+plt.plot(dw4_exp24_7[0]), plt.plot(dw1_exp24_7[0]), plt.plot(d0_diff), plt.show()
+import readline
+for i in range(readline.get_current_history_length()):
+    print (readline.get_history_item(i + 1))
+for i in range(readline.get_current_history_length()+50):
+    print (readline.get_history_item(i + 1))
+with open("./useful_commands.txt", "w+"):
+with open("./useful_commands.txt", "w+") as fi:
+	for i in range(readline.get_current_history_length()):
+	    print (readline.get_history_item(i + 1), f=fi)
+with open("./useful_commands.txt", "w+") as fi:
+	for i in range(readline.get_current_history_length()):
+	    print (readline.get_history_item(i + 1), file=fi)
